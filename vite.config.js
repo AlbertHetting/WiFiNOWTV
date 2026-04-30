@@ -1,7 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import tailwindcss from "@tailwindcss/vite";
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+// https://vitejs.dev/config/
+export default defineConfig(({ command }) => {
+  const config = {
+    plugins: [react(), tailwindcss()],
+    base: "/WiFiNOWTV/",
+  };
+
+  // Change base path when building for production
+  if (command !== "serve") {
+    config.base = "/WiFiNOWTV/"; // 👈 Replace with your GitHub repository name
+  }
+
+  return config;
+});
