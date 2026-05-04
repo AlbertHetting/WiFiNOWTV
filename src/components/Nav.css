@@ -1,0 +1,80 @@
+.navigationbar {
+  width: 865px;
+  height: 4rem;
+  background: #021830;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 24, 48, 1) 0%,
+    rgba(6, 55, 94, 1) 100%
+  );
+  border-radius: 18px;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: rgba(49, 49, 49, 0.29);
+}
+
+.innerelements {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.NavigationText {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 17px; /* Teksten skal centeres og logo boksen er 55px bred, ikon boksen er 72 bred. 
+  derfor skal teskten skubbes 17px fra evnstre for at være i midten*/
+}
+
+.LogoBox {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.Logo {
+  max-width: 48px;
+}
+
+.ActivelineLogo {
+  width: 3px;
+  height: 42px;
+  background-color: var(--DefaultRed);
+}
+
+.NavigationText,
+ul {
+  color: var(--WhiteColor);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: var(--PPlusSize);
+}
+
+.iconavigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.IconNav {
+  max-width: 20px;
+}
+
+.IconNav2 {
+  max-width: 16px;
+}
+
+.navbarflex {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.Navsticky {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}

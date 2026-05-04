@@ -1,18 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --WhiteColor: #ffffff;
   --FooterColor: #393939;
   --WhiteGrey: #a6a6a6;
-  --LightBlue: #0061FB;
-  --Gold: #B8965C;
+  --LightBlue: #0061fb;
+  --Gold: #b8965c;
   --TextColor: #1f1f1f;
   --DarkBlue: #001331;
-  --DefaultRed: #C41039;
+  --DefaultRed: #c41039;
 
-  --DeafaultFont: general-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+  --DeafaultFont: "Open Sans", sans-serif;
   --HeadingFont: Oswald, -apple-system, BlinkMacSystemFont, sans-serif;
 
+  --H1Size: 2rem;
+  --H2Size: 1.5rem;
+  --H3Size: 1rem;
+  --H4Size: 0.875rem;
+  --NavSize: 1.5rem;
+  --PPlusSize: 0.875rem;
+  --PSize: 0.75rem;
+  --PTinySize: 0.625rem;
+}
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
