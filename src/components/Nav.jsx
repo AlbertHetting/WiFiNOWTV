@@ -10,25 +10,61 @@ export default function NavBar() {
         <div className="navigationbar">
           <div className="innerelements">
             <div className="LogoBox">
-              <img src="./WiFiNOWTV.svg" alt="HomeButton" className="Logo" />
-              <div className="ActivelineLogo"></div>
+              <NavLink to="/">
+                <img src="./WiFiNOWTV.svg" alt="HomeButton" className="Logo" />
+                <div className="ActivelineLogo"></div>
+              </NavLink>
             </div>
 
             <nav className="NavigationText">
-              <NavLink>
-                {" "}
-                <ul>Latest Videos</ul>{" "}
+              <NavLink
+                to="/Latest"
+                className="hover-underline-animation center"
+              >
+                Latest Videos
               </NavLink>
-              <ul>Weekly News</ul>
-              <ul>Telecom</ul>
-              <ul>Vendor</ul>
-              <ul>Masterclass</ul>
+              <NavLink
+                to="/Weekly"
+                className="hover-underline-animation center"
+              >
+                Weekly News
+              </NavLink>
+              <NavLink
+                to="/Telecom"
+                className="hover-underline-animation center"
+              >
+                Telecom
+              </NavLink>
+              <NavLink
+                to="/Vendor"
+                className="hover-underline-animation center"
+              >
+                Vendor
+              </NavLink>
+              <NavLink
+                to="/Masterclass"
+                className="hover-underline-animation center"
+              >
+                Masterclass
+              </NavLink>
             </nav>
 
             <div className="iconavigation">
-              <img src="./navicons/history.svg" alt="" className="IconNav" />
-              <img src="./navicons/saved.svg" alt="" className="IconNav2" />
-              <img src="./navicons/profile.svg" alt="" className="IconNav" />
+              <NavLink
+                to="/History"
+                className="hover-underline-animation center"
+              >
+                <img src="./navicons/history.svg" alt="" className="IconNav" />
+              </NavLink>
+              <NavLink to="/Saved" className="hover-underline-animation center">
+                <img src="./navicons/saved.svg" alt="" className="IconNav2" />
+              </NavLink>
+              <NavLink
+                to="/Profile"
+                className="hover-underline-animation center"
+              >
+                <img src="./navicons/profile.svg" alt="" className="IconNav" />
+              </NavLink>
             </div>
           </div>
         </div>
