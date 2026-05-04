@@ -1,13 +1,16 @@
-import { Routes, Route, Navigate } from "react-router";
+import { Routes, Route } from "react-router";
 import "./App.css";
 import NavBar from "./components/Nav";
+import Latest from "./LatestVideos";
+import Home from "./Home";
 
 function App() {
   return (
     <main>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Latest" element={<Latest />} />
       </Routes>
     </main>
   );

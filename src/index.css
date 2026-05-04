@@ -31,8 +31,21 @@
 }
 
 .container {
-  width: 100%;
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 40px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: var(--H1Size);
 }

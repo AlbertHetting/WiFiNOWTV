@@ -31,6 +31,11 @@
 
 .LogoBox {
   display: flex;
+  align-items: center;
+}
+
+.LogoBox a {
+  display: flex;
   gap: 4px;
   align-items: center;
 }
@@ -43,10 +48,28 @@
   width: 3px;
   height: 42px;
   background-color: var(--DefaultRed);
+
+  /* Add these two lines to stop Flexbox from deleting it: */
+  flex-shrink: 0;
+  display: block;
+
+  /* 1. Animation Setup */
+  transform: scaleY(0); /* Squish it to 0 height */
+  transform-origin: center; /* Force it to grow from the absolute middle */
+  transition: transform 0.25s ease-out;
 }
 
-.NavigationText,
-ul {
+/* 2. The Triggers! */
+/* TRIGGER A: When the mouse hovers over the LogoBox... */
+.LogoBox:hover .ActivelineLogo,
+
+/* TRIGGER B: ...OR when React Router says the link is active... */
+.LogoBox a.active .ActivelineLogo {
+  /* ...do this to the Target: */
+  transform: scaleY(1);
+}
+
+.NavigationText a {
   color: var(--WhiteColor);
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
@@ -61,10 +84,12 @@ ul {
 
 .IconNav {
   max-width: 20px;
+  display: block;
 }
 
 .IconNav2 {
   max-width: 16px;
+  display: block;
 }
 
 .navbarflex {
@@ -77,4 +102,53 @@ ul {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* Color of nav-links, underline has to dissapear so i can animate it*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.LogoBox a {
+  display: flex;
+  align-items: center;
+}
+
+.hover-underline-animation {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  line-height: 1;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.6px;
+
+  bottom: -8px;
+  left: 0;
+  background-color: #ffffff;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.center::after {
+  transform-origin: bottom center;
+}
+
+.hover-underline-animation.center:hover::after {
+  transform-origin: bottom center;
+}
+
+/* If page is active keeps line active */
+.hover-underline-animation:hover::after,
+.hover-underline-animation.active::after {
+  transform: scaleX(1);
 }
