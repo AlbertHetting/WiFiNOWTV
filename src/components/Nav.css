@@ -48,24 +48,18 @@
   width: 3px;
   height: 42px;
   background-color: var(--DefaultRed);
-
-  /* Add these two lines to stop Flexbox from deleting it: */
   flex-shrink: 0;
   display: block;
-
-  /* 1. Animation Setup */
-  transform: scaleY(0); /* Squish it to 0 height */
-  transform-origin: center; /* Force it to grow from the absolute middle */
+  transform: scaleY(0);
+  transform-origin: center;
   transition: transform 0.25s ease-out;
 }
 
-/* 2. The Triggers! */
-/* TRIGGER A: When the mouse hovers over the LogoBox... */
+/* TRIGGER A*/
 .LogoBox:hover .ActivelineLogo,
 
-/* TRIGGER B: ...OR when React Router says the link is active... */
+/* TRIGGER B */
 .LogoBox a.active .ActivelineLogo {
-  /* ...do this to the Target: */
   transform: scaleY(1);
 }
 
@@ -100,11 +94,12 @@
 
 .Navsticky {
   position: fixed;
+  z-index: 100;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* Color of nav-links, underline has to dissapear so i can animate it*/
+/* Color of nav-links, underline has to dissapear so i can animate it */
 a {
   text-decoration: none;
   color: inherit;
@@ -147,7 +142,7 @@ a {
   transform-origin: bottom center;
 }
 
-/* If page is active keeps line active */
+/* If page is active keeps line active! */
 .hover-underline-animation:hover::after,
 .hover-underline-animation.active::after {
   transform: scaleX(1);

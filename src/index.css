@@ -16,6 +16,8 @@
   --TextColor: #1f1f1f;
   --DarkBlue: #001331;
   --DefaultRed: #c41039;
+  --BackgroundColor: #eeeeee;
+  --DarkBlue: #001331;
 
   --DeafaultFont: "Open Sans", sans-serif;
   --HeadingFont: Oswald, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -28,6 +30,10 @@
   --PPlusSize: 0.875rem;
   --PSize: 0.75rem;
   --PTinySize: 0.625rem;
+}
+
+main {
+  background-color: var(--WhiteColor);
 }
 
 .container {
@@ -44,6 +50,7 @@ h4,
 p,
 a {
   font-family: "Open Sans", sans-serif;
+  color: var(--TextColor);
 }
 
 h1 {

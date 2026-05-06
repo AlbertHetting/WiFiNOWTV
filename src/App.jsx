@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./components/Nav";
 import Latest from "./LatestVideos";
 import Home from "./Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Latest" element={<Latest />} />
       </Routes>
+      <Footer />
     </main>
   );
 }
