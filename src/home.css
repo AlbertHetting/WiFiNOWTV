@@ -1,6 +1,5 @@
 .lottie-container {
-  width: 60px; /* Or whatever size you need */
-  /* The Lottie will automatically scale to fit gracefully inside this box */
+  width: 50px;
   transform: translateX(16px);
 }
 
@@ -25,4 +24,94 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.UnderText h3 {
+  max-width: 35rem;
+  font-weight: 400;
+  font-size: var(--H3Size);
+}
+
+.UnderDate {
+  padding-top: 8px;
+  padding-bottom: 32px;
+}
+
+.UnderDate p {
+  color: var(--WhiteGrey);
+  font-size: var(--PSize);
+}
+
+.LowerFrontPage {
+  background-color: var(--BackgroundColor);
+  padding-bottom: 104px;
+}
+
+.SearchBar {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.SearchBar input {
+  border-radius: 16px;
+  border: none;
+  filter: drop-shadow(3px 3px 2px #8c8c8c);
+  width: 300px;
+  height: 33px;
+}
+
+.SearchBar input[type="text"] {
+  padding: 16px;
+  font-size: var(--PPlusSize);
+}
+
+.SearchBar button {
+  border: none;
+  width: 34px;
+  height: 33px;
+  border-radius: 16px;
+  background-color: var(--DarkBlue);
+  cursor: pointer;
+  transform: translateX(-33px);
+}
+
+.WeeklyNews {
+  padding-top: 32px;
+}
+
+.CategoryArrow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--TextColor);
+  cursor: pointer;
+  width: fit-content;
+  transition: color 0.3s ease;
+}
+
+.CategoryArrow svg {
+  transition: transform 0.3s ease;
+}
+
+.CategoryArrow:hover {
+  color: var(--DefaultRed);
+}
+
+.CategoryArrow:hover h4 {
+  color: var(--DefaultRed);
+}
+
+.CategoryArrow:hover svg {
+  transform: rotate(-90deg);
+}
+
+.VideoRow {
+  padding-top: 8px;
+  display: flex;
+  gap: 24px;
+}
+
+.MasterClass {
+  padding-top: 24px;
 }
