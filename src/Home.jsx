@@ -100,6 +100,37 @@ export default function Home() {
                 <VideoCard
                   title="Masterclass: Refining the scope of IEEE802"
                   date="April 14, 2026"
+                  thumbnailSrc="./Thumbnails/SpeakersDayOne-09.jpg"
+                />
+                <VideoCard
+                  title="Slashing component cost"
+                  date="April 14, 2026"
+                  thumbnailSrc="./Thumbnails/SpeakersDayTwo-45.jpg"
+                />
+                <VideoCard
+                  title="Giving your customers what they want"
+                  date="April 14, 2026"
+                  thumbnailSrc="./Thumbnails/SpeakersDayOne-12.jpg"
+                />
+                <VideoCard
+                  title="Creating market openings"
+                  date="April 14, 2026"
+                  thumbnailSrc="./Thumbnails/SpeakersDayTwo-19.jpg"
+                />
+              </div>
+            </div>
+
+            <div className="MasterClass">
+              <NavLink to="/Telecom">
+                <div className="CategoryArrow">
+                  <h4>Telecom</h4>
+                  <PureArrow />
+                </div>
+              </NavLink>
+              <div className="VideoRow">
+                <VideoCard
+                  title="Masterclass: Refining the scope of IEEE802"
+                  date="April 14, 2026"
                   thumbnailSrc="./Thumbnails/SpeakersDayTwo-36.jpg"
                 />
                 <VideoCard
@@ -120,10 +151,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="MasterClass">
-              <NavLink to="/Telecom">
+            <div className="Vendor">
+              <NavLink to="/Vendor">
                 <div className="CategoryArrow">
-                  <h4>Telecom</h4>
+                  <h4>Vendor</h4>
                   <PureArrow />
                 </div>
               </NavLink>
