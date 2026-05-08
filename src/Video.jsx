@@ -5,7 +5,7 @@ import VideoPlayer from "./components/VideoPlayer";
 import PureArrow from "./components/PureArrow";
 import { Player } from "@lottiefiles/react-lottie-player";
 import SaveVideoAni from "./Lottie/SaveVideoAniV2.json";
-import ShareVideoAni from "./Lottie/ShareIconAnimation.json";
+import ShareVideoAni from "./Lottie/ShareiconAnimation.json";
 
 export default function VideoPage() {
   const playerRef = useRef(null);
