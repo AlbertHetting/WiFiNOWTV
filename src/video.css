@@ -1,0 +1,56 @@
+.VideoInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.VideoInfoRight {
+  display: flex;
+  flex-shrink: none;
+  width: 160px;
+}
+
+.VideoInfoRight p {
+  padding-top: 2px;
+  font-size: 14px;
+}
+
+.OuterShareCon {
+  position: relative;
+  width: 100%;
+  max-width: 30px;
+  height: 100%;
+  max-height: 30px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.OuterSaveCon {
+  position: relative;
+  width: 100%;
+  max-width: 30px;
+  height: 100%;
+  max-height: 30px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.LottieShare {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+}
+
+.LottieSave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+}
