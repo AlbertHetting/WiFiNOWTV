@@ -4,6 +4,7 @@ import NavBar from "./components/Nav";
 import Latest from "./LatestVideos";
 import Home from "./Home";
 import Footer from "./components/Footer";
+import VideoPage from "./Video";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Latest" element={<Latest />} />
+        <Route path="/Video" element={<VideoPage />} />
       </Routes>
       <Footer />
     </main>

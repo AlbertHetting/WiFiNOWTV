@@ -73,4 +73,5 @@ a {
 .UnderTextFooter {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 32px;
 }

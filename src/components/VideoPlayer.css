@@ -1,0 +1,200 @@
+.VideoCon {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background-color: black;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.VideoOuterCon {
+  padding-top: 120px;
+}
+
+.CustomUI {
+  position: relative; /* skal bruges til at holde de absolutte elementer inde i CustomUI*/
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: black;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.loader-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.custom-controls-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  padding: 16px 16px;
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent); Cut out siden der ikke er brug for det */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.custom-controls-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Progress Bar*/
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--DefaultRed);
+  border-radius: 3px;
+  transition: width 0.1s linear;
+  position: relative;
+}
+
+.controls-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.controls-left,
+.controls-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-display {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+  width: 37px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 18px;
+}
+
+.time-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+  width: 96px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 18px;
+}
+
+.AudioControl {
+  display: flex;
+  padding-left: 10px;
+  gap: 4px;
+  align-items: center;
+  height: 37px;
+  width: 139px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 18px;
+}
+
+.custom-controls-overlay img {
+  width: 100%;
+  height: 100%;
+}
+
+.FullscreenDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+  width: 37px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 18px;
+}
+
+.playhead-circle {
+  position: absolute;
+  top: 50%;
+  right: -7px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: var(--DefaultRed);
+  border-radius: 50%;
+}
+
+.volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 95px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+.UIIcon {
+  transition: 0.4s ease;
+}
+
+.UIIcon:hover {
+  transform: scale(1.3);
+}
