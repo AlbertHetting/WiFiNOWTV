@@ -5,7 +5,7 @@ import { useRef } from "react"; // Dette er et en måde hvorpå man kan redraw s
 import PureArrow from "./components/PureArrow";
 import { NavLink } from "react-router";
 import VideoCard from "./components/VideoCard";
-import dummydata from "./data/dummyData.json";
+import dummydata from "./data/dummydata.json";
 
 export default function Home() {
   const playerRef = useRef(null);
