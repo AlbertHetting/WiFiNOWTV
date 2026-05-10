@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Latest" element={<Latest />} />
-        <Route path="/Video" element={<VideoPage />} />
+        <Route path="/video/:videoId" element={<VideoPage />} />
       </Routes>
       <Footer />
     </main>

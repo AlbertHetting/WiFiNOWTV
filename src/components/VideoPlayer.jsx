@@ -1,11 +1,15 @@
 import dummydata from "../data/dummydata.json";
 import "./VideoPlayer.css";
-import { useRef, useState } from "react";
+import { useRef, useState, forwardRef, useImperativeHandle } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import LoadingAni from "../Lottie/WiFiNOWLoading.json";
+import { useParams } from "react-router";
 
-export default function VideoPlayer() {
-  const currentVideo = dummydata[0]; // Temp data til testing
+const VideoPlayer = forwardRef((props, ref) => {
+  const { videoId } = useParams();
+
+  // Instead, use .find() to search your JSON for the exact matching video!
+  const currentVideo = dummydata.find((video) => video.id === videoId);
 
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -117,6 +121,18 @@ export default function VideoPlayer() {
     }
   };
 
+  // 2. THE NEW MAGIC: Build the Public Control Panel
+  useImperativeHandle(ref, () => ({
+    // We create a custom command called "seekTo" that the parent can use
+    seekTo: (timeInSeconds) => {
+      if (videoRef.current) {
+        videoRef.current.currentTime = timeInSeconds; // Move the video
+        setCurrentTime(timeInSeconds); // Update the React UI
+        videoRef.current.play(); // Optional: Automatically start playing when they click a segment
+      }
+    },
+  }));
+
   return (
     <section>
       <div className="VideoOuterCon">
@@ -125,21 +141,16 @@ export default function VideoPlayer() {
           <video
             ref={videoRef}
             src={currentVideo.vimeoEmbedUrl}
+            id={currentVideo.id}
             className="video-element"
             controls={false}
             onClick={togglePlay}
             /* Buffering states til loading animation */
-            onWaiting={() =>
-              setIsBuffering(true)
-            }
-            onPlaying={() =>
-              setIsBuffering(false)
-            }
+            onWaiting={() => setIsBuffering(true)}
+            onPlaying={() => setIsBuffering(false)}
             onCanPlay={() => setIsBuffering(false)}
             onTimeUpdate={handleTimeUpdate}
-            onLoadedMetadata={
-              handleLoadedMetadata
-            }
+            onLoadedMetadata={handleLoadedMetadata}
           />
 
           {/* Lottie Loading animation spiller ved isBuffering = true */}
@@ -157,11 +168,14 @@ export default function VideoPlayer() {
           <div
             className={`custom-controls-overlay ${showControls ? "" : "hidden"}`} // Show controls true eller false kommando, hvis true er der ingen ekstra class, hvis false addes der hidden og CSS klassen skjuler controls
           >
-            <div className="progress-container" onClick={handleProgressClick} > {/* Handle progreess klick er forklaret ovenfor men her tages funktionen i brug!*/}
+            <div className="progress-container" onClick={handleProgressClick}>
+              {" "}
+              {/* Handle progreess klick er forklaret ovenfor men her tages funktionen i brug!*/}
               <div
                 className="progress-fill"
-                
-                style={{ width: `${(currentTime / duration) * 100}%` }} /* Dette er style der regner ud hvor langt i videoen man er i procent og bruger det som style width så progress baren afspejler hvor langt man er i videoen */
+                style={{
+                  width: `${(currentTime / duration) * 100}%`,
+                }} /* Dette er style der regner ud hvor langt i videoen man er i procent og bruger det som style width så progress baren afspejler hvor langt man er i videoen */
               >
                 <div className="playhead-circle"></div>
               </div>
@@ -172,25 +186,44 @@ export default function VideoPlayer() {
               {/* UI til venstre */}
               <div className="controls-left">
                 <div className="background-play">
-                  <button className="control-btn" onClick={togglePlay}> {/* toggle play er forklaret ovenfor, funktionen sørger for at knappen afspiller og pauser videoen ved klik */}
+                  <button className="control-btn" onClick={togglePlay}>
+                    {" "}
+                    {/* toggle play er forklaret ovenfor, funktionen sørger for at knappen afspiller og pauser videoen ved klik */}
                     {isPlaying ? ( //Is playing er et is else statement, her ændres knapperne alt efter om videoen afspiller eller ej
-                      <img src="./icons/Pause.svg" alt="Pause" className="UIIcon" />
+                      <img
+                        src="../icons/Pause.svg"
+                        alt="Pause"
+                        className="UIIcon"
+                      />
                     ) : (
-                      <img src="./icons/Play.svg" alt="Play" className="UIIcon" />
+                      <img
+                        src="../icons/Play.svg"
+                        alt="Play"
+                        className="UIIcon"
+                      />
                     )}
                   </button>
                 </div>
                 <div className="time-display">
-                  {formatTime(currentTime)} / {formatTime(duration)}  {/* her indsættes curenttime og duration ind som tekst i UI'en så brugeren kan se hvor langt de er */}
+                  {formatTime(currentTime)} / {formatTime(duration)}{" "}
+                  {/* her indsættes curenttime og duration ind som tekst i UI'en så brugeren kan se hvor langt de er */}
                 </div>
 
                 <div className="AudioControl">
                   <button className="control-btn" onClick={toggleMute}>
                     {/* If else statement ligesom play pause */}
                     {volume === 0 ? (
-                      <img src="./icons/Mute.svg" alt="Muted" className="UIIcon"/>
+                      <img
+                        src="../icons/Mute.svg"
+                        alt="Muted"
+                        className="UIIcon"
+                      />
                     ) : (
-                      <img src="./icons/Audio.svg" alt="Audio" className="UIIcon"/>
+                      <img
+                        src="../icons/Audio.svg"
+                        alt="Audio"
+                        className="UIIcon"
+                      />
                     )}
                   </button>
 
@@ -200,7 +233,7 @@ export default function VideoPlayer() {
                     max="1"
                     step="0.05"
                     value={volume}
-                    onChange={handleVolumeChange} 
+                    onChange={handleVolumeChange}
                     className="volume-slider"
                   />
                 </div>
@@ -209,11 +242,21 @@ export default function VideoPlayer() {
               {/* Højre UI */}
               <div className="controls-right">
                 <div className="FullscreenDiv">
-                  <button className="control-btn" onClick={toggleFullScreen}> {/* her bruges toggle fullscreen funktionen som er beskrevet ovenfor*/} 
+                  <button className="control-btn" onClick={toggleFullScreen}>
+                    {" "}
+                    {/* her bruges toggle fullscreen funktionen som er beskrevet ovenfor*/}
                     {isFullscreen ? ( // If else statement ligesom PLay / pause og mute / unmute
-                      <img src="./icons/ExitFull.svg" alt="Exit" className="UIIcon" />
+                      <img
+                        src="../icons/ExitFull.svg"
+                        alt="Exit"
+                        className="UIIcon"
+                      />
                     ) : (
-                      <img src="./icons/fullscreen.svg" alt="Full" className="UIIcon" />
+                      <img
+                        src="../icons/fullscreen.svg"
+                        alt="Full"
+                        className="UIIcon"
+                      />
                     )}
                   </button>
                 </div>
@@ -224,4 +267,6 @@ export default function VideoPlayer() {
       </div>
     </section>
   );
-}
+});
+
+export default VideoPlayer;

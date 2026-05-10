@@ -1,56 +1,92 @@
 .VideoInfo {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin-top: 8px;
 }
 
 .VideoInfoRight {
   display: flex;
-  flex-shrink: none;
-  width: 160px;
+  align-items: center;
 }
 
 .VideoInfoRight p {
-  padding-top: 2px;
   font-size: 14px;
 }
 
 .OuterShareCon {
-  position: relative;
-  width: 100%;
-  max-width: 30px;
-  height: 100%;
-  max-height: 30px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+  width: 32px;
+  height: 32px;
 }
 
 .OuterSaveCon {
-  position: relative;
-  width: 100%;
-  max-width: 30px;
-  height: 100%;
-  max-height: 30px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+  width: 32px;
+  height: 32px;
 }
 
 .LottieShare {
-  position: absolute;
-  top: 50%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  width: 60px;
+  position: relative;
+  width: 42px;
+  top: -4px;
 }
 
 .LottieSave {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 45px;
+  position: relative;
+  width: 42px;
+  top: -4px;
+}
+
+.Segments h3 {
+  padding-top: 24px;
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.SegmentTitle {
+  font-size: 12px;
+  color: var(--TextColor);
+}
+
+.Timestamps {
+  margin-top: 8px;
+}
+
+.SegmentTemplate {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.SegmentTemplate button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.SegmentTemplate button {
+  color: var(--LightBlue);
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  pointer-events: pointer;
+}
+
+.SeekButton {
+  transition: 0.2s ease;
+}
+
+.SeekButton:hover {
+  text-decoration: underline;
+}
+
+.DownloadSlides {
+  margin-top: 8px;
+}
+
+.DownloadSlides a {
+  font-size: 12px;
+  color: var(--DefaultRed);
+}
+
+.DownloadText:hover {
+  text-decoration: underline;
 }

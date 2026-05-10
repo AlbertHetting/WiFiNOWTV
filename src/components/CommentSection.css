@@ -1,0 +1,26 @@
+.CommentSectionCon {
+  margin-top: 24px;
+  margin-bottom: 104px;
+}
+
+.CommentSectionLower {
+  width: 100%;
+  max-width: 724px;
+}
+
+.CommentLine {
+  border: none;
+  background: none;
+}
+
+.Comment input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: var(--WhiteGrey);
+  font-size: 14px;
+}
+
+.Comment input::placeholder {
+  font-size: 14px;
+}

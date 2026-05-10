@@ -2,8 +2,9 @@ import { useRef } from "react";
 import SaveVideoAni from "../Lottie/SaveVideoAniV2.json";
 import { Player } from "@lottiefiles/react-lottie-player";
 import "./VideoCard.css";
+import { NavLink } from "react-router";
 
-const VideoCard = ({ title, date, thumbnailSrc }) => {
+const VideoCard = ({ id, title, date, thumbnailSrc }) => {
   const playerRef = useRef(null);
 
   const handlePlayerClick = () => {
@@ -14,12 +15,16 @@ const VideoCard = ({ title, date, thumbnailSrc }) => {
 
   return (
     <div className="VideoCard">
-      <div className="ThumbnailSmall">
-        <img src={thumbnailSrc} alt="" className="SmallThumbnailImage" />
-      </div>
+      <NavLink to={`/video/${id}`} className="video-card-link">
+        <div className="ThumbnailSmall">
+          <img src={thumbnailSrc} alt="" className="SmallThumbnailImage" />
+        </div>
+      </NavLink>
 
       <div className="VideoCardUpperText">
-        <h3>{title}</h3>
+        <NavLink to={`/video/${id}`} className="video-card-link">
+          <h3>{title}</h3>
+        </NavLink>
         <div
           className="ThumbnailLottie"
           onClick={handlePlayerClick}
