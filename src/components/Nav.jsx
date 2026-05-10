@@ -1,5 +1,9 @@
 import { NavLink } from "react-router";
 import "./Nav.css";
+import logo from "/public/WiFiNOWTV.svg";
+import history from "/public/navicons/history.svg";
+import saved from "/public/navicons/saved.svg";
+import profile from "/public/navicons/profile.svg";
 
 // const NAV = [{ label: "Home", to: "/" }];
 
@@ -11,7 +15,7 @@ export default function NavBar() {
           <div className="innerelements">
             <div className="LogoBox">
               <NavLink to="/">
-                <img src="./WiFiNOWTV.svg" alt="HomeButton" className="Logo" />
+                <img src={logo} alt="" className="Logo" />
                 <div className="ActivelineLogo"></div>
               </NavLink>
             </div>
@@ -54,16 +58,16 @@ export default function NavBar() {
                 to="/History"
                 className="hover-underline-animation center"
               >
-                <img src="./navicons/history.svg" alt="" className="IconNav" />
+                <img src={history} alt="" className="IconNav" />
               </NavLink>
               <NavLink to="/Saved" className="hover-underline-animation center">
-                <img src="./navicons/saved.svg" alt="" className="IconNav2" />
+                <img src={saved} alt="" className="IconNav2" />
               </NavLink>
               <NavLink
                 to="/Profile"
                 className="hover-underline-animation center"
               >
-                <img src="./navicons/profile.svg" alt="" className="IconNav" />
+                <img src={profile} alt="" className="IconNav" />
               </NavLink>
             </div>
           </div>

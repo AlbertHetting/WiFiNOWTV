@@ -34,12 +34,15 @@
 
 .UnderDate {
   padding-top: 8px;
-  padding-bottom: 32px;
 }
 
 .UnderDate p {
   color: var(--WhiteGrey);
   font-size: var(--PSize);
+}
+
+.LowerfrontCon {
+  padding-top: 24px;
 }
 
 .LowerFrontPage {
@@ -118,4 +121,33 @@
 
 .Vendor {
   padding-top: 24px;
+}
+
+.LargeThumbDiv {
+  position: relative;
+  z-index: 0;
+}
+
+.LargeThumbDiv::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  bottom: -12px;
+  left: -12px;
+  right: -12px;
+  background-color: rgba(196, 16, 15, 0.13);
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0.95);
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.2s ease-out;
+  pointer-events: none;
+}
+
+/* Hover animation back box */
+.LargeThumbDiv:hover::before {
+  opacity: 1;
+  transform: scale(1);
 }
