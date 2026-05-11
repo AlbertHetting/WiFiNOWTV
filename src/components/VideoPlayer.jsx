@@ -155,7 +155,10 @@ const VideoPlayer = forwardRef((props, ref) => {
 
           {/* Lottie Loading animation spiller ved isBuffering = true */}
           {isBuffering && (
-            <div className="loader-overlay">
+            <div
+              className="loader-overlay"
+              style={{ display: isBuffering ? "block" : "none" }}
+            >
               <Player
                 src={LoadingAni}
                 loop={true}

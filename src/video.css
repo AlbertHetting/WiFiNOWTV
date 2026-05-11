@@ -37,7 +37,6 @@
 }
 
 .Segments h3 {
-  padding-top: 24px;
   font-size: 14px;
   font-weight: 450;
 }
@@ -89,4 +88,26 @@
 
 .DownloadText:hover {
   text-decoration: underline;
+}
+
+.LowerVideoPage {
+  display: flex;
+  margin-top: 24px;
+  gap: 24px;
+}
+
+.CategoryArrow {
+  margin-top: 4px;
+}
+
+.VideoGrid {
+  padding-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+}
+
+.LowerVideoRight h4 {
+  font-size: 14px;
+  font-weight: 500;
 }

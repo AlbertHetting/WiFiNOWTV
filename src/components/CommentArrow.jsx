@@ -1,19 +1,23 @@
 export default function CommentArrow() {
   return (
-    <svg
-      width="13"
-      height="12"
-      viewBox="0 0 13 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path className="SubmitArrow"
-        d="M12.0131 5.85531H0.817232M6.97495 10.8934L12.0131 5.85531L6.97495 0.817178"
-        stroke="#A6A6A6"
-        stroke-width="1.63441"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
+    <div className="SubmitArrow">
+      <svg
+        className="SubmitArrow"
+        width="13"
+        height="12"
+        viewBox="0 0 13 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          className="SubmitArrow"
+          d="M12.0131 5.85531H0.817232M6.97495 10.8934L12.0131 5.85531L6.97495 0.817178"
+          stroke="#A6A6A6"
+          stroke-width="1.63441"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
   );
 }

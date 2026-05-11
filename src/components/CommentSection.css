@@ -15,6 +15,10 @@
   cursor: pointer;
 }
 
+.CommentNumber h3 {
+  font-size: 16px;
+}
+
 .SubmitArrow {
   transition: stroke 0.2s ease;
 }
@@ -46,7 +50,85 @@
   margin-top: 8px;
   width: 100%;
   max-width: 724px;
-  height: 50px;
+  height: 315px;
   background-color: #eeeeee;
   border-radius: 18px;
+}
+
+.TopComment {
+  padding-top: 16px;
+  padding-left: 8px;
+}
+
+.ProfileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.ProfilePicture {
+  width: 100%;
+  height: 100%;
+  max-width: 24px;
+  max-height: 24px;
+  border-radius: 12px;
+}
+
+.PerCommentCon {
+  display: flex;
+  gap: 8px;
+}
+
+.PerCommentCon h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--DefaultText);
+}
+
+.PerCommentCon p {
+  font-size: 12px;
+  color: var(--DefaultText);
+}
+
+.ReplyComment {
+  display: flex;
+  margin-left: 12px;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ProfileImagereply {
+  margin-top: 6px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.ReplyText h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--DefaultText);
+}
+
+.ReplyText p {
+  font-size: 12px;
+  color: var(--DefaultText);
+}
+
+.replytreading {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.Percommentspacer {
+  margin-top: 32px;
+}
+
+.CommentSectionLower p {
+  max-width: 98%;
 }
