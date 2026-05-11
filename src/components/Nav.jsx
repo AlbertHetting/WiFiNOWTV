@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import "./Nav.css";
 import logo from "/public/WiFiNOWTV.svg";
-import history from "/public/navicons/history.svg";
+import history from "/public/navicons/history.svg"; //Import af billeder så de ikke forsvinder med relative file paths når der dykkes ned i siden
 import saved from "/public/navicons/saved.svg";
 import profile from "/public/navicons/profile.svg";
 

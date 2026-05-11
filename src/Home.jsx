@@ -30,7 +30,12 @@ export default function Home() {
           <div className="LargeThumbDiv">
             <NavLink to="/video/vid_001">
               <div className="HomeThumbnail">
-                <img src="./Images/BigTHMB.jpg" alt="" className="MainImage" />
+                <img
+                  src="./Images/BigTHMBV3.jpg"
+                  alt=""
+                  fetchpriority="high"
+                  className="MainImage"
+                />
               </div>
             </NavLink>
             <div className="topLine">
