@@ -5,15 +5,17 @@ import VideoPlayer from "./components/VideoPlayer";
 import PureArrow from "./components/PureArrow";
 import { Player } from "@lottiefiles/react-lottie-player";
 import SaveVideoAni from "./Lottie/SaveVideoAniV2.json";
-import ShareVideoAni from "./Lottie/ShareAniV2.json";
+import ShareVideoAni from "./Lottie/ShareAnimation.json";
 import dummydata from "./data/dummydata.json";
 import CommentSection from "./components/CommentSection";
+import VideoCard from "./components/VideoCard";
 
 export default function VideoPage() {
   // Peger ind på videoPlayer componentet
   const playerRemoteRef = useRef(null);
 
   const playerRef = useRef(null);
+  const playerRefShare = useRef(null);
 
   // Funktion til segmenter
   const handleSegmentClick = (timeInSeconds) => {
@@ -29,11 +31,9 @@ export default function VideoPage() {
     }
   };
 
-  const playerRef2 = useRef(null);
-
-  const handlePlayerClick2 = () => {
-    if (playerRef2.current) {
-      playerRef2.current.play();
+  const handlePlayerClick3 = () => {
+    if (playerRefShare.current) {
+      playerRefShare.current.play();
     }
   };
 
@@ -41,8 +41,12 @@ export default function VideoPage() {
 
   const currentVideo2 = dummydata.find((video) => video.id === videoId);
 
+  const randomVideos = [...dummydata]
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
   return (
-    <section>
+    <section key={videoId}>
       <div className="container">
         <VideoPlayer ref={playerRemoteRef} />
 
@@ -59,16 +63,17 @@ export default function VideoPage() {
           </div>
 
           <div className="VideoInfoRight">
-            <p>{}</p>
             <div
               className="OuterShareCon"
-              onClick={handlePlayerClick2}
+              onClick={handlePlayerClick3}
               style={{ cursor: "pointer" }}
             >
               <div className="LottieShare">
                 <Player
-                  src={ShareVideoAni}
-                  ref={playerRef2}
+                  src={JSON.parse(
+                    JSON.stringify(ShareVideoAni),
+                  )} /* Prevent memory leak, laves om til pure text og rekonstrueres som objekt igen */
+                  ref={playerRefShare}
                   loop={false}
                   autoplay={false}
                   keepLastFrame={false}
@@ -162,6 +167,23 @@ export default function VideoPage() {
               </a>
             </div>
             <CommentSection />
+          </div>
+
+          <div className="LowerVideoRight">
+            <h4>More like this</h4>
+            <div className="VideoGrid">
+              {randomVideos.map((video) => (
+                <VideoCard
+                  key={
+                    video.id
+                  } /* React requires a unique key for every mapped item! */
+                  id={video.id}
+                  title={video.title}
+                  date={video.date}
+                  thumbnailSrc={`.${video.thumbnail}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

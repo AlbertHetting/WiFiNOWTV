@@ -11,16 +11,86 @@ export default function CommentSection() {
       <section className="CommentSectionLower">
         <div className="Comment">
           <div className="EnterComment">
-          <input type="text" placeholder="Join the discussion"></input>
-          <button type="submit" className="CommentLine">
-            <CommentArrow/>
-          </button>
+            <input type="text" placeholder="Join the discussion"></input>
+            <button type="submit" className="CommentLine">
+              <CommentArrow />
+            </button>
           </div>
 
           <div className="CommentBlock">
+            <div className="TopComment">
+              <div className="PerCommentCon">
+                <div className="ProfilePicture">
+                  <img
+                    src="../ProfileImages/profile1.png"
+                    alt=""
+                    className="ProfileImage"
+                  />
+                </div>
 
+                <div className="TextCommentCon">
+                  <h4>NAME HERE</h4>
+                  <p>
+                    Great video, love the subjects! Overall I’m excited for what
+                    the future may bring for WiFi. Just one question, when you
+                    say that the new standards will change 802.11 what do you
+                    mean?
+                  </p>
+                </div>
+              </div>
+
+              <div className="ReplyComment">
+                <div className="Threading">
+                  <img
+                    src="../icons/ThreadingV4.svg"
+                    alt=""
+                    className="ThreadingImage"
+                  />
+                </div>
+
+                <div className="replytreading">
+                  <div className="ProfilePicture">
+                    <img
+                      src="../ProfileImages/profile2.png"
+                      alt=""
+                      className="ProfileImagereply"
+                    />
+                  </div>
+                  <div className="ReplyText">
+                    <h4>NAME HERE</h4>
+                    <p>
+                      Great video, love the subjects! Overall I’m excited for
+                      what the future may bring for WiFi. Just one question,
+                      when you say that the new standards will change 802.11
+                      what do you mean?{" "}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="Percommentspacer">
+                <div className="PerCommentCon">
+                  <div className="ProfilePicture">
+                    <img
+                      src="../ProfileImages/profile3.png"
+                      alt=""
+                      className="ProfileImage"
+                    />
+                  </div>
+
+                  <div className="TextCommentCon">
+                    <h4>NAME HERE</h4>
+                    <p>
+                      Great video, love the subjects! Overall I’m excited for
+                      what the future may bring for WiFi. Just one question,
+                      when you say that the new standards will change 802.11
+                      what do you mean?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
       </section>
     </div>
