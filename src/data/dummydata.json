@@ -4,7 +4,7 @@
     "title": "Weekly WiFi News -  Wi-Fi Halow: The future of wireless IoT is HaLow",
     "date": "May 1, 2026",
     "release-number": "21",
-    "thumbnail": "./Thumbnails/SpeakersDayOne-09.jpg",
+    "thumbnail": "./Thumbnails/Thumbnail.jpg",
     "Tag": "Weekly",
     "category": "Weekly News",
     "Segment1": "160",
@@ -27,7 +27,7 @@
     "title": "Weekly WiFi News -  Wi-Fi Halow: The future of wireless IoT is HaLow",
     "date": "April 27, 2026",
     "release-number": "20",
-    "thumbnail": "./Thumbnails/SpeakersDayOne-12.jpg",
+    "thumbnail": "./Thumbnails/Thumbnail-2.jpg",
     "Tag": "Weekly",
     "Link": "/Weekly",
     "category": "Weekly News",
@@ -40,6 +40,7 @@
     "Segment3": "406",
     "Segment3NumberText": "6:46",
     "Segment3text": "Discussion",
+    "PresentationURL": "./presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185122575/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=ba736b6981b8b0a658bcbd126a656cd352630c319a321bd7e781b736563206b3"
   },
   {
@@ -47,7 +48,7 @@
     "title": "Weekly WiFi News -  Wi-Fi Halow: The future of wireless IoT is HaLow",
     "date": "April 23, 2026",
     "release-number": "19",
-    "thumbnail": "./Thumbnails/SpeakersDayOne-22.jpg",
+    "thumbnail": "./Thumbnails/Thumbnail-3.jpg",
     "Tag": "Weekly",
     "Link": "/Weekly",
     "category": "Weekly News",
@@ -57,6 +58,7 @@
     "Segment2text": "About HaLow",
     "Segment3": "406",
     "Segment3text": "Discussion",
+    "PresentationURL": "./presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185122574/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=b9013418a233152e543404f5b458a5890250d4defb94a936f274b903f9fdba3a"
   },
   {
@@ -64,7 +66,7 @@
     "title": "Weekly WiFi News -  Wi-Fi Halow: The future of wireless IoT is HaLow",
     "date": "April 17, 2026",
     "release-number": "18",
-    "thumbnail": "./Thumbnails/SpeakersDayOne-43.jpg",
+    "thumbnail": "./Thumbnails/Thumbnail-4.jpg",
     "Tag": "Weekly",
     "Link": "/Weekly",
     "category": "Weekly News",
@@ -74,6 +76,7 @@
     "Segment2text": "About HaLow",
     "Segment3": "406",
     "Segment3text": "Discussion",
+    "PresentationURL": "./presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185122573/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=340433192a785648cf3736ad745212844c14adf20d9d26648c9ce6bb8cf9ad80"
   },
   {
@@ -81,7 +84,7 @@
     "title": "Weekly WiFi News -  Wi-Fi Halow: The future of wireless IoT is HaLow",
     "date": "April 17, 2026",
     "release-number": "17",
-    "thumbnail": "./Thumbnails/SpeakersDayTwo-51.jpg",
+    "thumbnail": "./Thumbnails/Thumbnail-4.jpg",
     "Tag": "Weekly",
     "Link": "/Weekly",
     "category": "Weekly News",
@@ -91,6 +94,7 @@
     "Segment2text": "About HaLow",
     "Segment3": "406",
     "Segment3text": "Discussion",
+    "PresentationURL": "./presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185122573/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=340433192a785648cf3736ad745212844c14adf20d9d26648c9ce6bb8cf9ad80"
   }
 ]
