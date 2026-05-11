@@ -17,11 +17,32 @@ export default function Home() {
   };
 
   const latestWeeklyVideos = dummydata
-    .filter((video) => video.Tag === "Weekly") // 1. Only grab Weekly videos
+    .filter((video) => video.Tag === "Weekly") // tag kun weekly
     .sort(
       (a, b) => parseInt(b["release-number"]) - parseInt(a["release-number"]),
-    ) // 2. Sort Highest to Lowest
-    .slice(0, 4); // 3. Keep exactly 4
+    ) // Sortering fra højeste til laveste (dato)
+    .slice(0, 4); // Tag kun 4 videoer
+
+  const latestMasterVideos = dummydata
+    .filter((video) => video.Tag === "Masterclass") // Tga kun Masterclass
+    .sort(
+      (a, b) => parseInt(b["release-number"]) - parseInt(a["release-number"]),
+    )
+    .slice(0, 4);
+
+  const latestTelecomVideos = dummydata
+    .filter((video) => video.Tag === "Telecom") // Tag kun Telecom
+    .sort(
+      (a, b) => parseInt(b["release-number"]) - parseInt(a["release-number"]),
+    )
+    .slice(0, 4);
+
+  const latestVendorVideos = dummydata
+    .filter((video) => video.Tag === "Vendor") // Tag kun Vendor
+    .sort(
+      (a, b) => parseInt(b["release-number"]) - parseInt(a["release-number"]),
+    )
+    .slice(0, 4);
 
   return (
     <>
@@ -33,7 +54,7 @@ export default function Home() {
                 <img
                   src="./Images/BigTHMBV3.jpg"
                   alt=""
-                  fetchpriority="high"
+                  fetchPriority="high"
                   className="MainImage"
                 />
               </div>
@@ -109,26 +130,17 @@ export default function Home() {
                   </div>
                 </NavLink>
                 <div className="VideoRow">
-                  <VideoCard
-                    title="Masterclass: Refining the scope of IEEE802"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayOne-09.jpg"
-                  />
-                  <VideoCard
-                    title="Slashing component cost"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayTwo-45.jpg"
-                  />
-                  <VideoCard
-                    title="Giving your customers what they want"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayOne-12.jpg"
-                  />
-                  <VideoCard
-                    title="Creating market openings"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayTwo-19.jpg"
-                  />
+                  {latestMasterVideos.map((video) => (
+                    <VideoCard
+                      key={
+                        video.id
+                      } /* React requires a unique key for every mapped item! */
+                      id={video.id}
+                      title={video.title}
+                      date={video.date}
+                      thumbnailSrc={video.thumbnail}
+                    />
+                  ))}
                 </div>
               </div>
 
@@ -140,26 +152,17 @@ export default function Home() {
                   </div>
                 </NavLink>
                 <div className="VideoRow">
-                  <VideoCard
-                    title="Masterclass: Refining the scope of IEEE802"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayTwo-36.jpg"
-                  />
-                  <VideoCard
-                    title="Weekly WiFi News"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayTwo-22.jpg"
-                  />
-                  <VideoCard
-                    title="Weekly WiFi News"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayOne-51.jpg"
-                  />
-                  <VideoCard
-                    title="Weekly WiFi News"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayTwo-45.jpg"
-                  />
+                  {latestTelecomVideos.map((video) => (
+                    <VideoCard
+                      key={
+                        video.id
+                      } /* React requires a unique key for every mapped item! */
+                      id={video.id}
+                      title={video.title}
+                      date={video.date}
+                      thumbnailSrc={video.thumbnail}
+                    />
+                  ))}
                 </div>
               </div>
 
@@ -171,26 +174,17 @@ export default function Home() {
                   </div>
                 </NavLink>
                 <div className="VideoRow">
-                  <VideoCard
-                    title="Masterclass: Refining the scope of IEEE802"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayTwo-36.jpg"
-                  />
-                  <VideoCard
-                    title="Weekly WiFi News"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayTwo-22.jpg"
-                  />
-                  <VideoCard
-                    title="Weekly WiFi News"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayOne-51.jpg"
-                  />
-                  <VideoCard
-                    title="Weekly WiFi News"
-                    date="April 14, 2026"
-                    thumbnailSrc="./Thumbnails/SpeakersDayTwo-45.jpg"
-                  />
+                  {latestVendorVideos.map((video) => (
+                    <VideoCard
+                      key={
+                        video.id
+                      } /* React requires a unique key for every mapped item! */
+                      id={video.id}
+                      title={video.title}
+                      date={video.date}
+                      thumbnailSrc={video.thumbnail}
+                    />
+                  ))}
                 </div>
               </div>
             </div>

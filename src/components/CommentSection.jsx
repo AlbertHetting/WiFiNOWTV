@@ -10,10 +10,17 @@ export default function CommentSection() {
 
       <section className="CommentSectionLower">
         <div className="Comment">
+          <div className="EnterComment">
           <input type="text" placeholder="Join the discussion"></input>
           <button type="submit" className="CommentLine">
             <CommentArrow/>
           </button>
+          </div>
+
+          <div className="CommentBlock">
+
+          </div>
+
         </div>
       </section>
     </div>

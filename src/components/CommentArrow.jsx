@@ -7,7 +7,7 @@ export default function CommentArrow() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
+      <path className="SubmitArrow"
         d="M12.0131 5.85531H0.817232M6.97495 10.8934L12.0131 5.85531L6.97495 0.817178"
         stroke="#A6A6A6"
         stroke-width="1.63441"
