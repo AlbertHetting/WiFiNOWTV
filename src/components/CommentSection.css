@@ -4,6 +4,7 @@
 }
 
 .CommentSectionLower {
+  margin-top: 16px;
   width: 100%;
   max-width: 724px;
 }
@@ -11,6 +12,20 @@
 .CommentLine {
   border: none;
   background: none;
+  cursor: pointer;
+}
+
+.SubmitArrow {
+  transition: stroke 0.2s ease;
+}
+
+.SubmitArrow:hover {
+  stroke: var(--DefaultRed);
+}
+
+.EnterComment {
+  display: flex;
+  gap: 16px;
 }
 
 .Comment input {
@@ -19,8 +34,19 @@
   border-right: none;
   border-color: var(--WhiteGrey);
   font-size: 14px;
+  width: 100%;
+  max-width: 690px;
 }
 
 .Comment input::placeholder {
   font-size: 14px;
+}
+
+.CommentBlock {
+  margin-top: 8px;
+  width: 100%;
+  max-width: 724px;
+  height: 50px;
+  background-color: #eeeeee;
+  border-radius: 18px;
 }
