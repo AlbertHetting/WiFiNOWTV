@@ -1,5 +1,6 @@
 import "./Footer.css";
 import { NavLink } from "react-router";
+import FooterImage from "/public/Images/WiFiNOWWhite.svg";
 
 export default function Footer() {
   return (
@@ -71,7 +72,7 @@ export default function Footer() {
         </div>
 
         <div className="FooterLogo">
-          <img src="./Images/WiFiNOWWhite.svg" alt="" />
+          <img src={FooterImage} alt="" />
         </div>
 
         <div className="UnderTextFooter">

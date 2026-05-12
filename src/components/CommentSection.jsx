@@ -22,14 +22,14 @@ export default function CommentSection() {
               <div className="PerCommentCon">
                 <div className="ProfilePicture">
                   <img
-                    src="../ProfileImages/profile1.png"
+                    src="../ProfileImages/Profile4.jpg"
                     alt=""
                     className="ProfileImage"
                   />
                 </div>
 
                 <div className="TextCommentCon">
-                  <h4>NAME HERE</h4>
+                  <h4>Irvind</h4>
                   <p>
                     Great video, love the subjects! Overall I’m excited for what
                     the future may bring for WiFi. Just one question, when you
@@ -51,13 +51,13 @@ export default function CommentSection() {
                 <div className="replytreading">
                   <div className="ProfilePicture">
                     <img
-                      src="../ProfileImages/profile2.png"
+                      src="../ProfileImages/Profile5.jpg"
                       alt=""
                       className="ProfileImagereply"
                     />
                   </div>
                   <div className="ReplyText">
-                    <h4>NAME HERE</h4>
+                    <h4>Michael</h4>
                     <p>
                       Great video, love the subjects! Overall I’m excited for
                       what the future may bring for WiFi. Just one question,
@@ -72,14 +72,14 @@ export default function CommentSection() {
                 <div className="PerCommentCon">
                   <div className="ProfilePicture">
                     <img
-                      src="../ProfileImages/profile3.png"
+                      src="../ProfileImages/Profile6.jpg"
                       alt=""
                       className="ProfileImage"
                     />
                   </div>
 
                   <div className="TextCommentCon">
-                    <h4>NAME HERE</h4>
+                    <h4>Edgar</h4>
                     <p>
                       Great video, love the subjects! Overall I’m excited for
                       what the future may bring for WiFi. Just one question,

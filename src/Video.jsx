@@ -31,9 +31,19 @@ export default function VideoPage() {
     }
   };
 
-  const handlePlayerClick3 = () => {
+  const handlePlayerClick3 = async () => {
     if (playerRefShare.current) {
       playerRefShare.current.play();
+    }
+
+    try {
+      const currentURL = window.location.href;
+      await navigator.clipboard.writeText(currentURL);
+
+      // alert("Link copied!");
+    } catch (err) {
+      console.error("failed to copy link", err);
+      alert("Copy falied!");
     }
   };
 
