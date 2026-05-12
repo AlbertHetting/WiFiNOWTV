@@ -3,11 +3,11 @@ import VideoCardLarge from "./components/VideoCardLarge";
 import "./WeeklyNews.css";
 import { useState } from "react";
 import VideoCard from "./components/VideoCard";
-import { NavLink, useParams } from "react-router";
-import PureArrow from "./components/PureArrow";
 
 export default function WeeklyNews() {
-  const VideoInfo = dummydata.slice(0, 2); // Tag kun 2 videoer
+  const VideoInfo = dummydata
+    .filter((video) => video.Tag === "Weekly")
+    .slice(0, 2); // Tag kun 2 videoer
 
   const [searchQuery, setSearchQuery] = useState("");
 
