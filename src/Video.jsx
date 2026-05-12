@@ -180,7 +180,7 @@ export default function VideoPage() {
           </div>
 
           <div className="LowerVideoRight">
-            <h4>More like this</h4>
+            <h4>More like this:</h4>
             <div className="VideoGrid">
               {randomVideos.map((video) => (
                 <VideoCard

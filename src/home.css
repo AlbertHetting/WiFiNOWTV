@@ -54,6 +54,7 @@
   padding-top: 32px;
   display: flex;
   justify-content: center;
+  padding-left: 34px;
 }
 
 .SearchBar input {
@@ -150,4 +151,16 @@
 .LargeThumbDiv:hover::before {
   opacity: 1;
   transform: scale(1);
+}
+
+.VideoGridFront {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+}
+
+.SearchTextHeader {
+  margin-top: 16px;
+  text-align: center;
 }

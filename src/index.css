@@ -37,7 +37,8 @@ main {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -55,4 +56,11 @@ a {
 
 h1 {
   font-size: var(--H1Size);
+}
+
+@media (max-width: 1440px) {
+  html {
+    /* in case brugeren har en meget fårlig eller meget skaleret skærm */
+    zoom: 85%;
+  }
 }

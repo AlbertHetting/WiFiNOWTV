@@ -89,6 +89,28 @@ export default function CommentSection() {
                   </div>
                 </div>
               </div>
+
+              <div className="Percommentspacer">
+                <div className="PerCommentCon">
+                  <div className="ProfilePicture">
+                    <img
+                      src="../ProfileImages/Profile7.jpg"
+                      alt=""
+                      className="ProfileImage"
+                    />
+                  </div>
+
+                  <div className="TextCommentCon">
+                    <h4>Jean</h4>
+                    <p>
+                      Great video, love the subjects! Overall I’m excited for
+                      what the future may bring for WiFi. Just one question,
+                      when you say that the new standards will change 802.11
+                      what do you mean?
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
