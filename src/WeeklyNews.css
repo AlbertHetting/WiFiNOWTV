@@ -1,13 +1,95 @@
 .FeaturedVideos {
   display: flex;
+  gap: 4rem;
 }
 
 .UpperCategoryContainer {
   padding-top: 120px;
 }
 
-.UpperCategoryContainer h1{
-    
+.UpperCategoryContainer h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 24px;
 }
 
+.LowerCategoryContainer {
+  background-color: var(--BackgroundColor);
+}
 
+.StackingCategory {
+  display: flex;
+  flex-direction: column;
+}
+
+.LoadMore {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 104px;
+}
+
+.LoadMoreBox {
+  width: 100%;
+  max-width: 170px;
+  height: 40px;
+  background-color: var(--DefaultRed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.LoadMoreBox p {
+  color: white;
+}
+
+.FilterBox {
+  background-color: var(--DefaultRed);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FilterBox2 {
+  background-color: #87878a;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FilterBox p {
+  color: white;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.FilterBox2 p {
+  color: white;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.SortVideos {
+  display: flex;
+  gap: 8px;
+}
+
+.FilterButtons {
+  margin-top: 32px;
+}
+
+.FilterButtons h3 {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
