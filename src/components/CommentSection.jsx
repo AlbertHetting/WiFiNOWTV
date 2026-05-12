@@ -5,7 +5,7 @@ export default function CommentSection() {
   return (
     <div className="CommentSectionCon">
       <section className="CommentNumber">
-        <h3>X Comments</h3>
+        <h3>4 Comments</h3>
       </section>
 
       <section className="CommentSectionLower">
