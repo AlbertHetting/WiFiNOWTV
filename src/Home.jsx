@@ -1,7 +1,7 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import SaveVideoAni from "./Lottie/SaveVideoAniV2.json";
 import "./home.css";
-import { useRef } from "react"; // Dette er et en måde hvorpå man kan redraw staten (ligesom useState) men i stedet for at re-render hele siden er det kun elementet der opdateres
+import { useRef, useState } from "react"; // Dette er et en måde hvorpå man kan redraw staten (ligesom useState) men i stedet for at re-render hele siden er det kun elementet der opdateres
 import PureArrow from "./components/PureArrow";
 import { NavLink } from "react-router";
 import VideoCard from "./components/VideoCard";
@@ -9,6 +9,14 @@ import dummydata from "./data/dummydata.json";
 
 export default function Home() {
   const playerRef = useRef(null);
+
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredVideos = dummydata.filter(
+    (
+      video, //filter funktion ligeosm med tag, denne gang bruges search qurey
+    ) => video.title.toLowerCase().includes(searchQuery.toLowerCase()), //To lower case på både video og search sikrer at der ikke opstår fejl på grund af lower/upper case
+  );
 
   const handlePlayerClick = () => {
     if (playerRef.current) {
@@ -89,104 +97,136 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         <div className="LowerfrontCon">
           <section className="LowerFrontPage">
             <div className="container">
               <div className="SearchBar">
-                <input type="text" placeholder="Search"></input>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.currentTarget.value)}
+                ></input>
                 <button type="submit">
                   <img src="./icons/Search.svg" alt="" />
                 </button>
               </div>
 
-              <div className="WeeklyNews">
-                <NavLink to="/Weekly">
-                  <div className="CategoryArrow">
-                    <h4>Weekly News</h4>
-                    <PureArrow />
-                  </div>
-                </NavLink>
-                <div className="VideoRow">
-                  {/* 4. THE MAP FUNCTION */}
-                  {latestWeeklyVideos.map((video) => (
-                    <VideoCard
-                      key={
-                        video.id
-                      } /* React requires a unique key for every mapped item! */
-                      id={video.id}
-                      title={video.title}
-                      date={video.date}
-                      thumbnailSrc={video.thumbnail}
-                    />
-                  ))}
-                </div>
-              </div>
+              {searchQuery ? ( //Conditional rendering fra react (if else statement) hvis der er en search query så vis search video con ellers vis video category con
+                <div className="SearchVideoCon">
+                  <h2 className="SearchTextHeader">
+                    Results for: "{searchQuery}"
+                  </h2>
+                  <div className="VideoGridFront">
+                    {filteredVideos.map((video) => (
+                      <VideoCard
+                        key={
+                          video.id
+                        } /* Unikt ID for mapped items (skal react altid bruge!)  */
+                        id={video.id}
+                        title={video.title}
+                        date={video.date}
+                        thumbnailSrc={video.thumbnail}
+                      />
+                    ))}
 
-              <div className="MasterClass">
-                <NavLink to="/Masterclass">
-                  <div className="CategoryArrow">
-                    <h4>Masterclass</h4>
-                    <PureArrow />
+                    {/* Hvis der er ingen videoer så sig no videos found */}
+                    {filteredVideos.length === 0 && <p>No videos found.</p>}
                   </div>
-                </NavLink>
-                <div className="VideoRow">
-                  {latestMasterVideos.map((video) => (
-                    <VideoCard
-                      key={
-                        video.id
-                      } /* React requires a unique key for every mapped item! */
-                      id={video.id}
-                      title={video.title}
-                      date={video.date}
-                      thumbnailSrc={video.thumbnail}
-                    />
-                  ))}
                 </div>
-              </div>
+              ) : (
+                <section className="VideoCategoryCon">
+                  <div className="WeeklyNews">
+                    <NavLink to="/Weekly">
+                      <div className="CategoryArrow">
+                        <h4>Weekly News</h4>
+                        <PureArrow />
+                      </div>
+                    </NavLink>
+                    <div className="VideoRow">
+                      {/*  Mpa function */}
+                      {latestWeeklyVideos.map((video) => (
+                        <VideoCard
+                          key={
+                            video.id
+                          } /* Unikt ID for mapped items (skal react altid bruge!)  */
+                          id={video.id}
+                          title={video.title}
+                          date={video.date}
+                          thumbnailSrc={video.thumbnail}
+                        />
+                      ))}
+                    </div>
+                  </div>
 
-              <div className="MasterClass">
-                <NavLink to="/Telecom">
-                  <div className="CategoryArrow">
-                    <h4>Telecom</h4>
-                    <PureArrow />
+                  <div className="MasterClass">
+                    <NavLink to="/Masterclass">
+                      <div className="CategoryArrow">
+                        <h4>Masterclass</h4>
+                        <PureArrow />
+                      </div>
+                    </NavLink>
+                    <div className="VideoRow">
+                      {latestMasterVideos.map((video) => (
+                        <VideoCard
+                          key={
+                            video.id
+                          } /* Unikt ID for mapped items (skal react altid bruge!) */
+                          id={video.id}
+                          title={video.title}
+                          date={video.date}
+                          thumbnailSrc={video.thumbnail}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </NavLink>
-                <div className="VideoRow">
-                  {latestTelecomVideos.map((video) => (
-                    <VideoCard
-                      key={
-                        video.id
-                      } /* React requires a unique key for every mapped item! */
-                      id={video.id}
-                      title={video.title}
-                      date={video.date}
-                      thumbnailSrc={video.thumbnail}
-                    />
-                  ))}
-                </div>
-              </div>
 
-              <div className="Vendor">
-                <NavLink to="/Vendor">
-                  <div className="CategoryArrow">
-                    <h4>Vendor</h4>
-                    <PureArrow />
+                  <div className="MasterClass">
+                    <NavLink to="/Telecom">
+                      <div className="CategoryArrow">
+                        <h4>Telecom</h4>
+                        <PureArrow />
+                      </div>
+                    </NavLink>
+                    <div className="VideoRow">
+                      {latestTelecomVideos.map((video) => (
+                        <VideoCard
+                          key={
+                            video.id
+                          } /* Unikt ID for mapped items (skal react altid bruge!)  */
+                          id={video.id}
+                          title={video.title}
+                          date={video.date}
+                          thumbnailSrc={video.thumbnail}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </NavLink>
-                <div className="VideoRow">
-                  {latestVendorVideos.map((video) => (
-                    <VideoCard
-                      key={
-                        video.id
-                      } /* React requires a unique key for every mapped item! */
-                      id={video.id}
-                      title={video.title}
-                      date={video.date}
-                      thumbnailSrc={video.thumbnail}
-                    />
-                  ))}
-                </div>
-              </div>
+
+                  <div className="Vendor">
+                    <NavLink to="/Vendor">
+                      <div className="CategoryArrow">
+                        <h4>Vendor</h4>
+                        <PureArrow />
+                      </div>
+                    </NavLink>
+                    <div className="VideoRow">
+                      {latestVendorVideos.map((video) => (
+                        <VideoCard
+                          key={
+                            video.id
+                          } /* Unikt ID for mapped items (skal react altid bruge!) */
+                          id={video.id}
+                          title={video.title}
+                          date={video.date}
+                          thumbnailSrc={video.thumbnail}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              )}
             </div>
           </section>
         </div>
