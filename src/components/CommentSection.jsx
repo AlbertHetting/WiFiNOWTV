@@ -24,7 +24,7 @@ export default function CommentSection() {
                   <img
                     src="../ProfileImages/Profile4.jpg"
                     alt=""
-                    className="ProfileImage"
+                    className="ProfileImageComment"
                   />
                 </div>
 
@@ -74,7 +74,7 @@ export default function CommentSection() {
                     <img
                       src="../ProfileImages/Profile6.jpg"
                       alt=""
-                      className="ProfileImage"
+                      className="ProfileImageComment"
                     />
                   </div>
 
@@ -96,7 +96,7 @@ export default function CommentSection() {
                     <img
                       src="../ProfileImages/Profile7.jpg"
                       alt=""
-                      className="ProfileImage"
+                      className="ProfileImageComment"
                     />
                   </div>
 
