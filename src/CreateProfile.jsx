@@ -8,7 +8,7 @@ export default function CreateProfile() {
         <div className="containerWide">
           <section className="CreateProfileWrapper">
             <div className="RightSideImage">
-              <img src="./Images/HalfThumb.jpg" alt="" />
+              <img src="./Images/HalfThumb.jpg" alt="" className="ClausImage"/>
             </div>
 
             <div className="MemberSignup">

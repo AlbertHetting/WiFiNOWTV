@@ -10,6 +10,7 @@ import Vendor from "./Vendor";
 import Telecom from "./Telecom";
 import MasterClass from "./Masterclass";
 import CreateProfile from "./CreateProfile";
+import Profile from "./Profile";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         <Route path="/Vendor" element={<Vendor />} />
         <Route path="/Telecom" element={<Telecom />} />
         <Route path="/Masterclass" element={<MasterClass />} />
-        <Route path="/Profile" element={<CreateProfile />} />
+        <Route path="/Create" element={<CreateProfile />} />
+        <Route path="/Profile" element={<Profile />} />
         <Route path="/video/:videoId" element={<VideoPage />} />
       </Routes>
       <Footer />
