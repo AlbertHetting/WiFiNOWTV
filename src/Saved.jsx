@@ -25,7 +25,7 @@ export default function Saved() {
             const myVideos = dummydata.filter(
               (video) => savedIds.includes(video.id), // Filter dummydata: hent kun videoer som kan findes i savedIDs
             );
-            setSavedVideos(myVideos); //constant laves
+            setSavedVideos(myVideos); //opdatering af state, så react kan vise de rigtige videoer
           }
         } catch (error) {
           console.error("Error fetching saved videos:", error);
