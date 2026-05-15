@@ -52,7 +52,7 @@ export default function VideoPage() {
   const currentVideo2 = dummydata.find((video) => video.id === videoId);
 
   const randomVideos = [...dummydata]
-    .sort(() => 0.5 - Math.random())
+    .sort(() => 0.5 - Math.random()) //sorterer 4 tilfældige videoer ved at sige 0.5- tilfældigt tal og sortere videoerne fra højest til lavest
     .slice(0, 4);
 
   return (

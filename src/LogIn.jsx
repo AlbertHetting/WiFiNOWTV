@@ -11,19 +11,19 @@ export default function LogIn() {
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
-  const handelogin = async (e) => {
-    e.preventDefault();
+  const handelogin = async (e) => {  //Async så browseren ikke går i stå mens scriptet kører
+    e.preventDefault(); // Stop refresh, kan ødelægge sciptet mid run
     setErrorMsg("");
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password); //firebase API login
 
       console.log("Logged in!");
       navigate("/");
     } catch (error) {
-      console.log("login failed", error.code, error.message);
+      console.log("login failed", error.code, error.message); // For debugging
 
-      setErrorMsg("Invalid password or email");
+      setErrorMsg("Invalid password or email"); // til brugeren så de ved at deres credentials er forkerte
     }
   };
 

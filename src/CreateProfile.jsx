@@ -16,39 +16,43 @@ export default function CreateProfile() {
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleSignup = async (e) => {
-    e.preventDefault();
+    //async funktion, stop ikke hele siden mens funktionen snakker med serveren
+    e.preventDefault(); // Stop refresh
     setErrorMsg("");
 
     if (password !== confirmPassword) {
+      //password og confirm password skal være lig med hinanden før man kan oprette sig
       setErrorMsg("Passwords do not match");
       return;
     }
 
     if (!termsAccepted) {
-      setErrorMsg("Accept terms to become a member");
+      setErrorMsg("Accept terms to become a member"); // checkboxen skal være checked ellers kan man ikke oprette sig
       return;
     }
 
     try {
+      // forsøg at gøre nedenstående, hvis det fejler, så skal den ikke ødelæge resten af siden
       const userCredential = await createUserWithEmailAndPassword(
+        // Firebase commando til at oprette en ny bruger, nedenfor kan de parametre ses som brugeren laves for. Await bruges så funktionen kan køre færdig før næste trin.
         auth,
         email,
         password,
       );
-      const user = userCredential.user;
+      const user = userCredential.user; // vi hender brugerdaten ned fra det som firebase sender tilbage (UI og EMAIL) derudover laver vi en saved
 
       await setDoc(doc(db, "users", user.uid), {
+        //her laves der en folder i firebase til en brugers gemte videoer: db -> users -> UID -> saved videos file path
         email: user.email,
         savedVideos: [],
       });
 
-      console.log("Account Created!");
-      navigate("/");
+      console.log("Account Created!"); // debugging log
+      navigate("/"); // send tilbage til homepage
     } catch (error) {
-      // This will print the exact reason your try block is aborting!
-      console.error("THE SILENT KILLER IS: ", error.code, error.message);
+      console.error("Error:", error.code, error.message); // for debugging af oprettelse
 
-      setErrorMsg(error.message);
+      setErrorMsg(error.message); // til brugeren, hvad er fejlen hvis der er en
     }
   };
 

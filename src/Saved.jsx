@@ -8,45 +8,40 @@ import VideoCard from "./components/VideoCard";
 
 export default function Saved() {
   const [savedVideos, setSavedVideos] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // 2. Fetch from Firebase when the page loads
+  // Efter page load skal firebase hentes ned
   useEffect(() => {
-    // This checks if the user is logged in
+    // Tjek om brugeren er logget ind:
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
         try {
-          // Grab their specific profile document
-          const userDocRef = doc(db, "users", user.uid);
+          const userDocRef = doc(db, "users", user.uid); // Tag deres specifikke userID
           const docSnap = await getDoc(userDocRef);
 
           if (docSnap.exists()) {
-            // Extract the array of saved video IDs (e.g., ["vid_001", "vid_014"])
-            const savedIds = docSnap.data().savedVideos || [];
+            const savedIds = docSnap.data().savedVideos || []; // Hent arrayet af gemte videoer
 
-            // Filter dummydata: Only keep videos whose ID is inside the savedIds array
-            const myVideos = dummydata.filter((video) =>
-              savedIds.includes(video.id),
+            const myVideos = dummydata.filter(
+              (video) => savedIds.includes(video.id), // Filter dummydata: hent kun videoer som kan findes i savedIDs
             );
-            setSavedVideos(myVideos);
+            setSavedVideos(myVideos); //constant laves
           }
         } catch (error) {
           console.error("Error fetching saved videos:", error);
         }
       } else {
-        // If they aren't logged in, empty the list
-        setSavedVideos([]);
+        setSavedVideos([]); // Hvis brugeren ikke er logget ind er listen tom
       }
-      setLoading(false); // Stop the loading spinner
     });
 
-    return () => unsubscribe(); // Cleanup listener when leaving the page
+    return () => unsubscribe(); // Prevent et memoryleak (et crash af siden efter man forlader siden)
   }, []);
 
-  // 3. Search Bar Logic (Filters the ALREADY saved videos)
-  const filteredVideos = savedVideos.filter((video) =>
-    video.title.toLowerCase().includes(searchQuery.toLowerCase()),
+  const filteredVideos = savedVideos.filter(
+    (
+      video, // Søgefunktion for gemte videoer ie. savedVideos.filter
+    ) => video.title.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -74,9 +69,7 @@ export default function Saved() {
           </div>
 
           <div className="MapSaved">
-            {loading ? ( // Conditional tekst til forskellige states!
-              <p>Loading your saved videos...</p>
-            ) : savedVideos.length === 0 ? (
+            {savedVideos.length === 0 ? (
               <p>You haven't saved any videos yet!</p>
             ) : filteredVideos.length === 0 ? (
               <p>No saved videos match your search.</p>
