@@ -1,0 +1,32 @@
+.SavedHeader {
+  text-align: center;
+  padding-top: 120px;
+  font-family: "Oswald", sans-serif;
+}
+
+.SavedHeader h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  color: var(--TextColor);
+  margin-bottom: 32px;
+}
+
+.SavedVideosCon {
+  background-color: #eeeeee;
+}
+
+.SavedSearch {
+  padding-bottom: 32px;
+}
+
+.VideoGridSaved {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+}
+
+.MapSaved {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 104px;
+}
