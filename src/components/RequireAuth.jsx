@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { Navigate, useLocation } from "react-router";
+import { Navigate } from "react-router";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "/firebase";
 
 export default function RequireAuth({ children }) {
   const [checking, setChecking] = useState(true);
   const [user, setUser] = useState(null);
-  const location = useLocation();
+
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (u) => {
@@ -22,8 +22,8 @@ export default function RequireAuth({ children }) {
   }
 
   if (!user) {
-    // Not signed in, send to profile (keep where they tried to go)
-    return <Navigate to="/Create" replace state={{ from: location }} />;
+    // Not signed in, send to create profile
+    return <Navigate to="/Create"/>;
   }
 
   return children;

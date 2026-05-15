@@ -1,7 +1,7 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import SaveVideoAni from "./Lottie/SaveVideoAniV2.json";
 import "./home.css";
-import { useRef, useState } from "react"; // Dette er et en måde hvorpå man kan redraw staten (ligesom useState) men i stedet for at re-render hele siden er det kun elementet der opdateres
+import { useRef, useState } from "react"; 
 import PureArrow from "./components/PureArrow";
 import { NavLink } from "react-router";
 import VideoCard from "./components/VideoCard";
@@ -18,7 +18,7 @@ export default function Home() {
     ) => video.title.toLowerCase().includes(searchQuery.toLowerCase()), //To lower case på både video og search sikrer at der ikke opstår fejl på grund af lower/upper case
   );
 
-  const playerRef = useRef(null);
+  const playerRef = useRef(null); // useRef bruges som en holder (ligesom useState) men i modsat useState skaber den ikke et re-render når en funktion skal køre, i stedet skal den gøre det muligt at "pass" for eksemple play og pause uden at hele komponentet skal genindlæses
 
   // Async funktion så den kan snakke med firebase uden at stoppe hele siden
   const handleSaveClick = async (e) => {
