@@ -18,10 +18,11 @@ export default function WeeklyNews() {
     ) // Sortering fra højeste til laveste (dato)
     .slice(2, 20); // skip first 2 video, derefter tag op til nummer 20 video
 
-  const filteredVideos = dummydata.filter((video) => video.Tag === "Weekly"); //Kun weekly videos søges igennem!
-  (
-    video, //filter funktion ligeosm med tag, denne gang bruges search qurey
-  ) => video.title.toLowerCase().includes(searchQuery.toLowerCase()); //To lower case på både video og search sikrer at der ikke opstår fejl på grund af lower/upper case
+  const filteredVideos = dummydata
+    .filter((video) => video.Tag === "Weekly") //Kun weekly videos søges igennem!
+    .filter((video) =>
+      video.title.toLowerCase().includes(searchQuery.toLowerCase()),
+    ); //To lower case på både video og search sikrer at der ikke opstår fejl på grund af lower/upper case
 
   return (
     <section>

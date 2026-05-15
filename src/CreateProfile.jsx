@@ -1,14 +1,64 @@
 import "./CreateProfile.css";
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
+import { auth, db } from "../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+import { useState } from "react";
 
 export default function CreateProfile() {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+    setErrorMsg("");
+
+    if (password !== confirmPassword) {
+      setErrorMsg("Passwords do not match");
+      return;
+    }
+
+    if (!termsAccepted) {
+      setErrorMsg("Accept terms to become a member");
+      return;
+    }
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
+      const user = userCredential.user;
+
+      await setDoc(doc(db, "users", user.uid), {
+        email: user.email,
+        savedVideos: [],
+      });
+
+      console.log("Account Created!");
+      navigate("/");
+    } catch (error) {
+      // This will print the exact reason your try block is aborting!
+      console.error("THE SILENT KILLER IS: ", error.code, error.message);
+
+      setErrorMsg(error.message);
+    }
+  };
+
   return (
     <section>
       <div className="OuterConCreateProfile">
         <div className="containerWide">
           <section className="CreateProfileWrapper">
             <div className="RightSideImage">
-              <img src="./Images/HalfThumb.jpg" alt="" className="ClausImage"/>
+              <img src="./Images/HalfThumb.jpg" alt="" className="ClausImage" />
             </div>
 
             <div className="MemberSignup">
@@ -18,18 +68,18 @@ export default function CreateProfile() {
                 alt=""
                 className="WiFiNOWRed"
               />
-              <form action="" className="CreateForm">
+              <form className="CreateForm" onSubmit={handleSignup}>
                 <div className="TopForm">
                   <div>
-                    <label for="name">Name*</label> <br></br>
+                    <label htmlFor="name">Name*</label> <br></br>
                     <input type="text" id="name" name="name"></input>
                   </div>
                   <div>
-                    <label for="lastname">Last name*</label> <br></br>
+                    <label htmlFor="lastname">Last name*</label> <br></br>
                     <input type="text" id="lastname" name="lastname"></input>
                   </div>
                   <div>
-                    <label for="DisplayName">Display name</label> <br></br>
+                    <label htmlFor="DisplayName">Display name</label> <br></br>
                     <input
                       type="text"
                       id="DisplayName"
@@ -39,33 +89,47 @@ export default function CreateProfile() {
                 </div>
                 <div className="MidForm">
                   <div className="MidFormMargin">
-                    <label for="Email">Email*</label> <br></br>
-                    <input type="text" id="Email" name="Email"></input>
+                    <label htmlFor="Email">Email*</label> <br></br>
+                    <input
+                      type="text"
+                      id="Email"
+                      name="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    ></input>
                   </div>
 
                   <div className="MidFormMargin">
-                    <label for="Phone">Phone Number*</label> <br></br>
+                    <label htmlFor="Phone">Phone Number*</label> <br></br>
                     <input type="text" id="Phone" name="Phone"></input>
                   </div>
 
                   <div className="MidFormMargin">
-                    <label for="Password">Password*</label> <br></br>
-                    <input type="text" id="Password" name="Password"></input>
+                    <label htmlFor="Password">Password*</label> <br></br>
+                    <input
+                      type="text"
+                      id="Password"
+                      name="Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    ></input>
                   </div>
 
                   <div className="MidFormMargin">
-                    <label for="ConfirmPassword">Confirm Password*</label>
+                    <label htmlFor="ConfirmPassword">Confirm Password*</label>
                     <br></br>
                     <input
                       type="text"
                       id="ConfirmPassword"
                       name="ConfirmPassword"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
                     ></input>
                   </div>
                 </div>
                 <div className="LowerForm1">
                   <div className="PositionCon">
-                    <label for="Position">Position*</label> <br></br>
+                    <label htmlFor="Position">Position*</label> <br></br>
                     <input
                       type="text"
                       className="Position"
@@ -73,7 +137,7 @@ export default function CreateProfile() {
                     ></input>
                   </div>
                   <div className="Selector1">
-                    <label for="Name" className="LabelMargin">
+                    <label htmlFor="Name" className="LabelMargin">
                       Organization type*
                     </label>
                     <br></br>
@@ -88,7 +152,7 @@ export default function CreateProfile() {
                 </div>
                 <div className="LowerForm1">
                   <div className="PositionCon">
-                    <label for="company">Company*</label> <br></br>
+                    <label htmlFor="company">Company*</label> <br></br>
                     <input
                       type="text"
                       className="Position"
@@ -96,7 +160,7 @@ export default function CreateProfile() {
                     ></input>
                   </div>
                   <div className="Selector1">
-                    <label for="Name" className="LabelMargin">
+                    <label htmlFor="Name" className="LabelMargin">
                       region*
                     </label>
                     <br></br>
@@ -121,7 +185,7 @@ export default function CreateProfile() {
                         id="matterIOT"
                         name="matterIOT"
                       ></input>
-                      <label for="MatterIOT" className="LabelCheck">
+                      <label htmlFor="MatterIOT" className="LabelCheck">
                         Matter / IoT
                       </label>
                     </div>
@@ -133,7 +197,7 @@ export default function CreateProfile() {
                         name="Industrial applications"
                       ></input>
                       <label
-                        for="Industrial applications"
+                        htmlFor="Industrial applications"
                         className="LabelCheck"
                       >
                         Industrial applications
@@ -146,7 +210,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="PublicVenues"
                       ></input>
-                      <label for="PublicVenues" className="LabelCheck">
+                      <label htmlFor="PublicVenues" className="LabelCheck">
                         Large public venues
                       </label>
                     </div>
@@ -157,7 +221,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="Offload"
                       ></input>
-                      <label for="Offload" className="LabelCheck">
+                      <label htmlFor="Offload" className="LabelCheck">
                         Wi-fi Offload / convergence
                       </label>
                     </div>
@@ -168,7 +232,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="Residential"
                       ></input>
-                      <label for="Residential" className="LabelCheck">
+                      <label htmlFor="Residential" className="LabelCheck">
                         Residential Wi-Fi
                       </label>
                     </div>
@@ -179,7 +243,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="Regulation"
                       ></input>
-                      <label for="Regulation" className="LabelCheck">
+                      <label htmlFor="Regulation" className="LabelCheck">
                         Regulation / policy
                       </label>
                     </div>
@@ -190,7 +254,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="enterprise"
                       ></input>
-                      <label for="enterprise" className="LabelCheck">
+                      <label htmlFor="enterprise" className="LabelCheck">
                         Enterprise Wi-Fi
                       </label>
                     </div>
@@ -201,7 +265,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="Evolution"
                       ></input>
-                      <label for="Evolution" className="LabelCheck">
+                      <label htmlFor="Evolution" className="LabelCheck">
                         Wi-Fi evolution & standards
                       </label>
                     </div>
@@ -212,7 +276,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="Location"
                       ></input>
-                      <label for="Location" className="LabelCheck">
+                      <label htmlFor="Location" className="LabelCheck">
                         Location based services
                       </label>
                     </div>
@@ -223,7 +287,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="EndUser"
                       ></input>
-                      <label for="EndUser" className="LabelCheck">
+                      <label htmlFor="EndUser" className="LabelCheck">
                         End user devices
                       </label>
                     </div>
@@ -234,7 +298,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="Consumer"
                       ></input>
-                      <label for="Consumer" className="LabelCheck">
+                      <label htmlFor="Consumer" className="LabelCheck">
                         Consumer grade Wi-Fi
                       </label>
                     </div>
@@ -245,14 +309,14 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="Analysis"
                       ></input>
-                      <label for="Analysis" className="LabelCheck">
+                      <label htmlFor="Analysis" className="LabelCheck">
                         Analysis & forecasts
                       </label>
                     </div>
 
                     <div className="CheckboxContainer">
                       <input type="checkbox" id="Checkbox" name="60GHZ"></input>
-                      <label for="60GHZ" className="LabelCheck">
+                      <label htmlFor="60GHZ" className="LabelCheck">
                         60 GHz tech & use cases
                       </label>
                     </div>
@@ -263,7 +327,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="SmartCities"
                       ></input>
-                      <label for="SmartCities" className="LabelCheck">
+                      <label htmlFor="SmartCities" className="LabelCheck">
                         Smart cities & public Wi-Fi
                       </label>
                     </div>
@@ -274,7 +338,7 @@ export default function CreateProfile() {
                         id="Checkbox"
                         name="Testing"
                       ></input>
-                      <label for="testing" className="LabelCheck">
+                      <label htmlFor="testing" className="LabelCheck">
                         Wi-Fi testing & planning
                       </label>
                     </div>
@@ -283,14 +347,24 @@ export default function CreateProfile() {
 
                 <div className="AcceptCon">
                   <div className="CheckboxContainer">
-                    <input type="checkbox" id="Checkbox" name="Testing"></input>
-                    <label for="testing" className="LabelCheck">
+                    <input
+                      type="checkbox"
+                      id="Checkbox"
+                      name="Checkbox"
+                      checked={termsAccepted}
+                      onChange={(e) => setTermsAccepted(e.target.checked)}
+                    ></input>
+                    <label htmlFor="Checkbox" className="LabelCheck">
                       I acknowledge that the information I provide on this form
                       may be shared with the sponsors or publishers of this
                       content and they may contact me*
                     </label>
                   </div>
                 </div>
+
+                {errorMsg && (
+                  <p style={{ color: "red", fontWeight: "bold" }}>{errorMsg}</p>
+                )}
 
                 <div className="Finishsegment">
                   <input

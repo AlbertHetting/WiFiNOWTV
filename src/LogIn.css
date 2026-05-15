@@ -1,0 +1,90 @@
+.LoginForm input {
+  color: var(--TextColor);
+  border-style: solid;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 6px;
+  width: 407px;
+  border-color: var(--WhiteGrey);
+}
+
+.Login {
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LoginForm label {
+  color: var(--WhiteGrey);
+  font-size: 14px;
+}
+
+.LoginFormCon {
+  margin-top: 32px;
+}
+
+.Remembertext {
+  width: 407px;
+}
+
+.Remembertext h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--WhiteGrey);
+}
+
+.Redbutton {
+  background-color: var(--DefaultRed);
+  border-style: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.LogInOrSignUp {
+  width: 407px;
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.Redbutton p {
+  color: white;
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.RedbuttonBecome {
+  background-color: var(--DefaultRed);
+  border-radius: 8px;
+  width: fit-content;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.BecomeAMember {
+  margin-top: 24px;
+  max-width: 407px;
+}
+
+.BecomeAMember p {
+  font-size: 14px;
+}
+
+.RedbuttonBecome p {
+  color: white;
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}

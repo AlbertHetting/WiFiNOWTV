@@ -11,6 +11,9 @@ import Telecom from "./Telecom";
 import MasterClass from "./Masterclass";
 import CreateProfile from "./CreateProfile";
 import Profile from "./Profile";
+import LogIn from "./LogIn";
+import RequireAuth from "./components/RequireAuth";
+import Saved from "./Saved";
 
 function App() {
   return (
@@ -24,7 +27,23 @@ function App() {
         <Route path="/Telecom" element={<Telecom />} />
         <Route path="/Masterclass" element={<MasterClass />} />
         <Route path="/Create" element={<CreateProfile />} />
-        <Route path="/Profile" element={<Profile />} />
+        <Route
+          path="/Profile"
+          element={
+            <RequireAuth>
+              <Profile />
+            </RequireAuth>
+          }
+        />
+        <Route path="/LogIn" element={<LogIn />} />
+        <Route
+          path="/Saved"
+          element={
+            <RequireAuth>
+              <Saved />
+            </RequireAuth>
+          }
+        />
         <Route path="/video/:videoId" element={<VideoPage />} />
       </Routes>
       <Footer />
