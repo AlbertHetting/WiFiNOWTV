@@ -11,7 +11,8 @@ export default function LogIn() {
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
-  const handelogin = async (e) => {  //Async så browseren ikke går i stå mens scriptet kører
+  const handelogin = async (e) => {
+    //Async så browseren ikke går i stå mens scriptet kører
     e.preventDefault(); // Stop refresh, kan ødelægge sciptet mid run
     setErrorMsg("");
 
@@ -96,6 +97,7 @@ export default function LogIn() {
           </section>
         </div>
       </div>
+      <div className="ProfileBottom"></div>
     </section>
   );
 }
