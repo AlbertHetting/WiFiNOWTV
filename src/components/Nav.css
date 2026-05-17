@@ -43,8 +43,11 @@
 
 .Logo {
   position: relative;
+  flex-shrink: 0;
   max-width: 48px;
   z-index: 100;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .ActivelineLogo {

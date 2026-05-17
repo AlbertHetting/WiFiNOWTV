@@ -68,6 +68,8 @@ a {
 
 .FooterLogo {
   margin-top: 48px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .UnderTextFooter {
