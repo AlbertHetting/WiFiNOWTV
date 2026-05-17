@@ -38,6 +38,7 @@
   display: flex;
   gap: 4px;
   align-items: center;
+  pointer-events: none;
 }
 
 .Logo {
