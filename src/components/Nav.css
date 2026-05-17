@@ -30,6 +30,7 @@
 }
 
 .LogoBox {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -38,11 +39,12 @@
   display: flex;
   gap: 4px;
   align-items: center;
-  pointer-events: none;
 }
 
 .Logo {
+  position: relative;
   max-width: 48px;
+  z-index: 100;
 }
 
 .ActivelineLogo {
