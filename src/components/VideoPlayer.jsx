@@ -95,7 +95,7 @@ const VideoPlayer = forwardRef((props, ref) => {
 
     const newTime = clickPercentage * duration; // Derefter tages duration (videos længde) og ganges med procenten for at finde der hvor brugeren har klikket!
     videoRef.current.currentTime = newTime; // Videoen sættes til newTime (der spoles frem eller tilbage)
-    setCurrentTime(newTime); // Til sidst gemmes den nye tid i newTime staten
+    setCurrentTime(newTime); // Til sidst gemmes den nye tid i curerntTime staten
   };
 
   const toggleMute = () => {
@@ -121,7 +121,7 @@ const VideoPlayer = forwardRef((props, ref) => {
     }
   };
 
-  // 2. THE NEW MAGIC: Build the Public Control Panel
+  // Build the Public Control Panel
   useImperativeHandle(ref, () => ({
     // We create a custom command called "seekTo" that the parent can use
     seekTo: (timeInSeconds) => {
