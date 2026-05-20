@@ -39,7 +39,7 @@ export default function CreateProfile() {
         email,
         password,
       );
-      const user = userCredential.user; // vi hender brugerdaten ned fra det som firebase sender tilbage (UI og EMAIL) derudover laver vi en saved
+      const user = userCredential.user; // vi hender brugerdaten ned fra det som firebase sender tilbage (ID og EMAIL) derudover laver vi en saved
 
       await setDoc(doc(db, "users", user.uid), {
         //her laves der en folder i firebase til en brugers gemte videoer: db -> users -> UID -> saved videos file path
