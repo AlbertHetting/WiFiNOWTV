@@ -73,7 +73,7 @@ export default function LogIn() {
                 </div>
 
                 <div className="LogInOrSignUp">
-                  <button className="Redbutton">
+                  <button className="Redbutton" type="submit">
                     <p className="ButtonText">Log in</p>
                   </button>
                   <div className="Redbutton">
