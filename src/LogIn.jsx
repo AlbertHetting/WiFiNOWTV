@@ -73,9 +73,9 @@ export default function LogIn() {
                 </div>
 
                 <div className="LogInOrSignUp">
-                  <button className="Redbutton" type="submit">
+                  <input className="Redbutton" type="submit">
                     <p className="ButtonText">Log in</p>
-                  </button>
+                  </input>
                   <div className="Redbutton">
                     <p>Forgot pasword?</p>
                   </div>
