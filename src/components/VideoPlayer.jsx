@@ -8,7 +8,7 @@ import { useParams } from "react-router";
 const VideoPlayer = forwardRef((props, ref) => {
   const { videoId } = useParams();
 
-  // Instead, use .find() to search your JSON for the exact matching video!
+  // Find den nuværende video genem .find kommando
   const currentVideo = dummydata.find((video) => video.id === videoId);
 
   const [currentTime, setCurrentTime] = useState(0);
@@ -37,7 +37,7 @@ const VideoPlayer = forwardRef((props, ref) => {
     if (isNaN(timeInSeconds)) return "0:00"; // error fallback 00:00
     const minutes = Math.floor(timeInSeconds / 60); // minutes er det første der regnes ud, det er bare sekunder delt med 60
     const seconds = Math.floor(timeInSeconds % 60); // Derefter bruges % operator til at finde de resterende sekunder (sekunder delt med 60 giver et helt tal, det som er til overs er sekunder)
-    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`; // else if function, er tallet mindre end 10? så skal der et 0 foran, hvis ikke skal ingentig foran
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`; // betinget operator (if else) function, er tallet mindre end 10? så skal der et 0 foran, hvis ikke skal ingentig foran
   };
 
   const handleTimeUpdate = () => {
@@ -81,15 +81,15 @@ const VideoPlayer = forwardRef((props, ref) => {
     } else {
       videoRef.current.play();
     }
-    setIsPlaying(!isPlaying); //Når der er klikket ændres staten til det modsatte af hvad den var før, derfor virker knappen.
+    setIsPlaying(!isPlaying); // Når der er klikket ændres staten til det modsatte af hvad den var før, derfor virker knappen.
   };
 
   const handleProgressClick = (e) => {
     // Event handler den er sat på progress bar nede i HTML
 
-    const progressBar = e.currentTarget.getBoundingClientRect(); // Event lægges på hvad brugeren har klikket på
+    const progressBar = e.currentTarget.getBoundingClientRect(); // Find elementets størrelse og position
 
-    const clickPosition = e.clientX - progressBar.left; // Matematik for at finde ud af hvor præcis brugeren har klikket. Der tages først et X koordinat og derefter trækkes der hvor langt progress baren er til vnnstre fra
+    const clickPosition = e.clientX - progressBar.left; // Matematik for at finde ud af hvor præcis brugeren har klikket. Der tages først et X koordinat og derefter trækkes der hvor langt progress baren er til venstre fra (finder det sted på linjens x skase brugeren har klikket)
 
     const clickPercentage = clickPosition / progressBar.width; // her udregnes en procent, ved at sige clickposition (findes fra linjen ovenfor) og deler den med progress barens fulde bredde
 
@@ -121,14 +121,14 @@ const VideoPlayer = forwardRef((props, ref) => {
     }
   };
 
-  // Build the Public Control Panel
+  // Funktion der bruges til at skippe frem og tilbage i koden, gør at parent elementet kan tilgå seekTo
   useImperativeHandle(ref, () => ({
-    // We create a custom command called "seekTo" that the parent can use
+    // seekTo kommando som kan bruges
     seekTo: (timeInSeconds) => {
       if (videoRef.current) {
-        videoRef.current.currentTime = timeInSeconds; // Move the video
+        videoRef.current.currentTime = timeInSeconds; // ryk videoen til timeinseconds
         setCurrentTime(timeInSeconds); // Update the React UI
-        videoRef.current.play(); // Optional: Automatically start playing when they click a segment
+        videoRef.current.play(); // Start videoen når brugeren har klikket på et timestamp
       }
     },
   }));
