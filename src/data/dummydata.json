@@ -44,7 +44,7 @@
     "Segment4": "710",
     "Segment4NumberText": "11:50",
     "Segment4text": "Regulatory Hurdles",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140520608/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=c677dc79aee4ffda6d49308d36310deaf887e05d0ca2705f61a90ae8980da4e9"
   },
   {
@@ -68,7 +68,7 @@
     "Segment4": "600",
     "Segment4NumberText": "10:00",
     "Segment4text": "Security Updates",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140522290/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=dd68fa866d207bd392e53603bc846c8721a264a00d5897512f730e5529301253"
   },
   {
@@ -92,7 +92,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "Consumer Costs",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140524774/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=29f5505fae396663e3b805e4f604c5b1ec73ecbd17833b8b29671b030bb9cdd8"
   },
   {
@@ -116,7 +116,7 @@
     "Segment4": "680",
     "Segment4NumberText": "11:20",
     "Segment4text": "Closing",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140524908/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=58fa68b1a85cdd94026998315285642503b66e1c97e5c6b125ee6b494a98f9ed"
   },
   {
@@ -140,7 +140,7 @@
     "Segment4": "850",
     "Segment4NumberText": "14:10",
     "Segment4text": "Expert Opinion",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140526728/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=8f559336e6d676ee1c425b2f1bdddd5eca484c98c384d3d165e0233380c3dd59"
   },
   {
@@ -164,7 +164,7 @@
     "Segment4": "700",
     "Segment4NumberText": "11:40",
     "Segment4text": "Market Adoption",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140527345/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=9ceb0d2b46842720e4006ab5c3bb0fc146a9bee0ff24cf4da3318abb36a47272"
   },
   {
@@ -188,7 +188,7 @@
     "Segment4": "550",
     "Segment4NumberText": "9:10",
     "Segment4text": "Closing remarks",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1188094384/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=9a9a8791c119672c5c0a31290c4814966b1e17f6bc6bc3bb218ed6facf404b21"
   },
   {
@@ -212,7 +212,7 @@
     "Segment4": "550",
     "Segment4NumberText": "9:10",
     "Segment4text": "Closing",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185122575/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=ba736b6981b8b0a658bcbd126a656cd352630c319a321bd7e781b736563206b3"
   },
   {
@@ -236,7 +236,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "Conclusion",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185122574/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=b9013418a233152e543404f5b458a5890250d4defb94a936f274b903f9fdba3a"
   },
   {
@@ -260,7 +260,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "Conclusion",
-    "PresentationURL": "./presentations/Presentation1.pdf",
+    "PresentationURL": "../presentations/Presentation1.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185122573/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=340433192a785648cf3736ad745212844c14adf20d9d26648c9ce6bb8cf9ad80"
   },
   {
@@ -284,7 +284,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "Conclusion",
-    "PresentationURL": "./presentations/Presentation5.pdf",
+    "PresentationURL": "../presentations/Presentation5.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185126307/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=91b1722b04f77f5278d87900bd84a5655f281d92f8a8354f9f30e7de19586e1c"
   },
   {
@@ -308,7 +308,7 @@
     "Segment4": "610",
     "Segment4NumberText": "10:10",
     "Segment4text": "Live Demo",
-    "PresentationURL": "./presentations/Presentation6.pdf",
+    "PresentationURL": "../presentations/Presentation6.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185126924/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=0aecab008561fc2906241fc1ce97b3f99a93e2b72ca53d1dc2d5fb9d4db19308"
   },
   {
@@ -332,7 +332,7 @@
     "Segment4": "550",
     "Segment4NumberText": "9:10",
     "Segment4text": "ROI Analysis",
-    "PresentationURL": "./presentations/Presentation7.pdf",
+    "PresentationURL": "../presentations/Presentation7.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185127756/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=153b4f22bffb3207f2c86cae3e5e26b4ce4d0829eafeca28848030595ac1164d"
   },
   {
@@ -356,7 +356,7 @@
     "Segment4": "650",
     "Segment4NumberText": "10:50",
     "Segment4text": "Configuration",
-    "PresentationURL": "./presentations/Presentation8.pdf",
+    "PresentationURL": "../presentations/Presentation8.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140528303/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=6c2ee551503f9f489d603f34efca47c320af4513e30f137107c70a9b1aac38f9"
   },
   {
@@ -380,7 +380,7 @@
     "Segment4": "720",
     "Segment4NumberText": "12:00",
     "Segment4text": "Q&A",
-    "PresentationURL": "./presentations/Presentation8.pdf",
+    "PresentationURL": "../presentations/Presentation8.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140529545/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=55b039406ef75249d521cf2b6dd750c3ed12f72ef83fc134dae9d654a54fcc5e"
   },
   {
@@ -404,7 +404,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "Scanner Limitations",
-    "PresentationURL": "./presentations/Presentation8.pdf",
+    "PresentationURL": "../presentations/Presentation8.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140534751/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=bd13ec6c5021d63e22e838ba80a1afc558e73a29192958387de463dd71e5046d"
   },
   {
@@ -428,7 +428,7 @@
     "Segment4": "640",
     "Segment4NumberText": "10:40",
     "Segment4text": "VoWiFi Tuning",
-    "PresentationURL": "./presentations/Presentation8.pdf",
+    "PresentationURL": "../presentations/Presentation8.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140535878/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=092e63e3c59677967158be9fbadc82e45321ae4bb9759b5ef4e216c754130122"
   },
   {
@@ -452,7 +452,7 @@
     "Segment4": "810",
     "Segment4NumberText": "13:30",
     "Segment4text": "Live Demo",
-    "PresentationURL": "./presentations/Presentation8.pdf",
+    "PresentationURL": "../presentations/Presentation8.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140542036/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=8aa0e03d0442790b30a075b1ea4ffaadf809e1426bd110e740618b25f6b0cc65"
   },
   {
@@ -476,7 +476,7 @@
     "Segment4": "600",
     "Segment4NumberText": "10:00",
     "Segment4text": "Backend Integrations",
-    "PresentationURL": "./presentations/Presentation8.pdf",
+    "PresentationURL": "../presentations/Presentation8.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140543726/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=215d658cafa0df184b5f8a46da3ad39a238a432cb8baf526399032ccf190f3fc"
   },
   {
@@ -500,7 +500,7 @@
     "Segment4": "750",
     "Segment4NumberText": "12:30",
     "Segment4text": "Multicast to Unicast",
-    "PresentationURL": "./presentations/Presentation8.pdf",
+    "PresentationURL": "../presentations/Presentation8.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140523307/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=f85a4fdeaf28d60a5ba7f1793a6655cca822ac8db5c40346a1f00b583159a957"
   },
   {
@@ -524,7 +524,7 @@
     "Segment4": "900",
     "Segment4NumberText": "15:00",
     "Segment4text": "Panel Discussion",
-    "PresentationURL": "./presentations/Presentation8.pdf",
+    "PresentationURL": "../presentations/Presentation8.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185129030/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=175655fc3a3faa59e393410b61be1898e7aa2214d5645326175b4c409189c711"
   },
   {
@@ -548,7 +548,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "Cost Projections",
-    "PresentationURL": "./presentations/Presentation9.pdf",
+    "PresentationURL": "../presentations/Presentation9.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140526728/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=8f559336e6d676ee1c425b2f1bdddd5eca484c98c384d3d165e0233380c3dd59"
   },
   {
@@ -572,7 +572,7 @@
     "Segment4": "610",
     "Segment4NumberText": "10:10",
     "Segment4text": "Case Studies",
-    "PresentationURL": "./presentations/Presentation10.pdf",
+    "PresentationURL": "../presentations/Presentation10.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185130959/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=91a87b1585e5078206b1f91534db66cbe683873a9d8c83c038e94e5520865857"
   },
   {
@@ -596,7 +596,7 @@
     "Segment4": "550",
     "Segment4NumberText": "9:10",
     "Segment4text": "Execution Strategy",
-    "PresentationURL": "./presentations/Presentation11.pdf",
+    "PresentationURL": "../presentations/Presentation11.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185131920/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=6a58c0a2a94bbe9d9d0ce6ee8b86039870c7cce4a73830a2f8a95e31ecae31c1"
   },
   {
@@ -620,7 +620,7 @@
     "Segment4": "900",
     "Segment4NumberText": "15:00",
     "Segment4text": "Audience Q&A",
-    "PresentationURL": "./presentations/Presentation12.pdf",
+    "PresentationURL": "../presentations/Presentation12.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185132406/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=6877a76ff2373ffe65797d28f9ea900f9e82ff3a36f2bb5571462a7ef16a2e0f"
   },
   {
@@ -644,7 +644,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "Corporate Responsibility",
-    "PresentationURL": "./presentations/Presentation13.pdf",
+    "PresentationURL": "../presentations/Presentation13.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185134508/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=006d043ac3d01f3406781e5d2b64e90f0ac0eede828105b6ae166ec5c5478595"
   },
   {
@@ -668,7 +668,7 @@
     "Segment4": "610",
     "Segment4NumberText": "10:10",
     "Segment4text": "Troubleshooting Afar",
-    "PresentationURL": "./presentations/Presentation14.pdf",
+    "PresentationURL": "../presentations/Presentation14.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185133609/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=b09dbb73d19d5e337a3ea5ec4c0c6ed70d288f2a352963664db65a351c4c553d"
   },
   {
@@ -692,7 +692,7 @@
     "Segment4": "700",
     "Segment4NumberText": "11:40",
     "Segment4text": "Closing Thoughts",
-    "PresentationURL": "./presentations/Presentation15.pdf",
+    "PresentationURL": "../presentations/Presentation15.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140539499/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=b3b41e975ef659190516a4bda93b92f9f65bf7c0eb4d5a0d73e78137c73424de"
   },
   {
@@ -716,7 +716,7 @@
     "Segment4": "690",
     "Segment4NumberText": "11:30",
     "Segment4text": "Success Metrics",
-    "PresentationURL": "./presentations/Presentation15.pdf",
+    "PresentationURL": "../presentations/Presentation15.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140517192/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=ca3af3cbd55c62fa59ed46297425b5e6a690d40625d5a3bd42e3c2e186bb90ba"
   },
   {
@@ -740,7 +740,7 @@
     "Segment4": "610",
     "Segment4NumberText": "10:10",
     "Segment4text": "Q&A",
-    "PresentationURL": "./presentations/Presentation15.pdf",
+    "PresentationURL": "../presentations/Presentation15.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140521833/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=6a1696d543346bb213a7674c50bceba63575df5dc7a49d10c2974d6851a8bdec"
   },
   {
@@ -764,7 +764,7 @@
     "Segment4": "750",
     "Segment4NumberText": "12:30",
     "Segment4text": "Hybrid Solutions",
-    "PresentationURL": "./presentations/Presentation15.pdf",
+    "PresentationURL": "../presentations/Presentation15.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140537084/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=ed71fb592b40426780c8a52e0cde59e5d61e23f8c98c9b1212ae697fa0eea7d1"
   },
   {
@@ -788,7 +788,7 @@
     "Segment4": "650",
     "Segment4NumberText": "10:50",
     "Segment4text": "Future Outlook",
-    "PresentationURL": "./presentations/Presentation15.pdf",
+    "PresentationURL": "../presentations/Presentation15.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140517192/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=ca3af3cbd55c62fa59ed46297425b5e6a690d40625d5a3bd42e3c2e186bb90ba"
   },
   {
@@ -812,7 +812,7 @@
     "Segment4": "630",
     "Segment4NumberText": "10:30",
     "Segment4text": "Closing",
-    "PresentationURL": "./presentations/Presentation15.pdf",
+    "PresentationURL": "../presentations/Presentation15.pdf",
     "vimeoEmbedUrl": ""
   },
   {
@@ -836,7 +836,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "Future Projects",
-    "PresentationURL": "./presentations/Presentation15.pdf",
+    "PresentationURL": "../presentations/Presentation15.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140542678/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=5c388a2bf1eb4452776151a347fcd37fc87ccff190dccd7439ac4d94312e8da2"
   },
   {
@@ -860,7 +860,7 @@
     "Segment4": "550",
     "Segment4NumberText": "9:10",
     "Segment4text": "Wrap Up",
-    "PresentationURL": "./presentations/Presentation15.pdf",
+    "PresentationURL": "../presentations/Presentation15.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185136510/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=5836fc08d7d3a8f46f5012420a5ec6bb9397e084ba240f68c9c4470b42adc12f"
   },
   {
@@ -884,7 +884,7 @@
     "Segment4": "900",
     "Segment4NumberText": "15:00",
     "Segment4text": "Cost Comparison",
-    "PresentationURL": "./presentations/Presentation16.pdf",
+    "PresentationURL": "../presentations/Presentation16.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185134619/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=6c431e80224e5f7b73d1a5b97433d5905d5117883f46ea7dc656f74ce1652c35"
   },
   {
@@ -908,7 +908,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "User Privacy",
-    "PresentationURL": "./presentations/Presentation17.pdf",
+    "PresentationURL": "../presentations/Presentation17.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185137072/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=a7c7ccd03f5faf2606d5b5e9febf7b71d886e716517141b12a01e3e20e5b6b8a"
   },
   {
@@ -932,7 +932,7 @@
     "Segment4": "610",
     "Segment4NumberText": "10:10",
     "Segment4text": "Future Landscape",
-    "PresentationURL": "./presentations/Presentation18.pdf",
+    "PresentationURL": "../presentations/Presentation18.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185138421/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=d5ee2efd122d440d324cd1475f482fc9636e576093e3875b58104bf813a0fb90"
   },
   {
@@ -956,7 +956,7 @@
     "Segment4": "550",
     "Segment4NumberText": "9:10",
     "Segment4text": "Success Stories",
-    "PresentationURL": "./presentations/Presentation19.pdf",
+    "PresentationURL": "../presentations/Presentation19.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185137235/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=0ba0d70cfc45f1a1fffe0000e009644920dae91ecb967cc54942e5799c63ccf9"
   },
   {
@@ -980,7 +980,7 @@
     "Segment4": "900",
     "Segment4NumberText": "15:00",
     "Segment4text": "Integration with WiFi",
-    "PresentationURL": "./presentations/Presentation20.pdf",
+    "PresentationURL": "../presentations/Presentation20.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185138971/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=2b11d56e8240cb5145241c1c412672f2c068b0c05952ae6e38636fda547e3d12"
   },
   {
@@ -1004,7 +1004,7 @@
     "Segment4": "800",
     "Segment4NumberText": "13:20",
     "Segment4text": "Security Concerns",
-    "PresentationURL": "./presentations/Presentation21.pdf",
+    "PresentationURL": "../presentations/Presentation21.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185139676/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=d712831f7a596ec1b352c0d7e96c1f218e801df43b52888254a8669a4dcbdc4a"
   },
   {
@@ -1028,7 +1028,7 @@
     "Segment4": "650",
     "Segment4NumberText": "10:50",
     "Segment4text": "Pricing Options",
-    "PresentationURL": "./presentations/Presentation22.pdf",
+    "PresentationURL": "../presentations/Presentation22.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140536627/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=e65cd9e1399a89b19df13a5bae439b166db73a89522dc6ebf444c8eb1bb20ab2"
   },
   {
@@ -1052,7 +1052,7 @@
     "Segment4": "690",
     "Segment4NumberText": "11:30",
     "Segment4text": "Final Thoughts",
-    "PresentationURL": "./presentations/Presentation22.pdf",
+    "PresentationURL": "../presentations/Presentation22.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140535478/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=4ebc3736fab0063214b6c7cf22c770947c15c5f1d25a336f39a25b1b85702648"
   },
   {
@@ -1076,7 +1076,7 @@
     "Segment4": "750",
     "Segment4NumberText": "12:30",
     "Segment4text": "Use Cases",
-    "PresentationURL": "./presentations/Presentation22.pdf",
+    "PresentationURL": "../presentations/Presentation22.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140525911/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=4d78d07e9987c85c6fb8881c47bcf465adfe77051d9929dc248d5e5e35d2a9c6"
   },
   {
@@ -1100,7 +1100,7 @@
     "Segment4": "620",
     "Segment4NumberText": "10:20",
     "Segment4text": "Security First",
-    "PresentationURL": "./presentations/Presentation22.pdf",
+    "PresentationURL": "../presentations/Presentation22.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140540783/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=4dd4a8a286fa7984543f5b18e6db8adad9b2e44831da8bb789a64436157de064"
   },
   {
@@ -1124,7 +1124,7 @@
     "Segment4": "710",
     "Segment4NumberText": "11:50",
     "Segment4text": "Licensing Models",
-    "PresentationURL": "./presentations/Presentation22.pdf",
+    "PresentationURL": "../presentations/Presentation22.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140516247/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=e98cd0b2ca585c1d9e5c964444aec508760e637968c31e991e1ef77a0f38af26"
   },
   {
@@ -1148,7 +1148,7 @@
     "Segment4": "600",
     "Segment4NumberText": "10:00",
     "Segment4text": "Q&A",
-    "PresentationURL": "./presentations/Presentation22.pdf",
+    "PresentationURL": "../presentations/Presentation22.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1140533470/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=9905fbedda19b72aca1d190b9bc93c96bd3a38ad2807cbd42f280c560c8c57ed"
   },
   {
@@ -1196,7 +1196,7 @@
     "Segment4": "610",
     "Segment4NumberText": "10:10",
     "Segment4text": "Pricing Strategy",
-    "PresentationURL": "./presentations/Presentation22.pdf",
+    "PresentationURL": "../presentations/Presentation22.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185141716/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=580565495bb96265247038e33cbbcdcb6bd83faa13d1d7a9de46dcefd59159ac"
   },
   {
@@ -1220,7 +1220,7 @@
     "Segment4": "550",
     "Segment4NumberText": "9:10",
     "Segment4text": "Final Thoughts",
-    "PresentationURL": "./presentations/Presentation23.pdf",
+    "PresentationURL": "../presentations/Presentation23.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185142215/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=e6cec9f573e8c4d7363cc2dd2213d0a8266230aed5e651e14d4ce4986e300831"
   },
   {
@@ -1244,7 +1244,7 @@
     "Segment4": "900",
     "Segment4NumberText": "15:00",
     "Segment4text": "Use Cases",
-    "PresentationURL": "./presentations/Presentation24.pdf",
+    "PresentationURL": "../presentations/Presentation24.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185144812/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=415c8fe292d75758e872368acfb144f4cfcc0df93d1449c86dc9e6c127f5cc22"
   },
   {
@@ -1292,7 +1292,7 @@
     "Segment4": "610",
     "Segment4NumberText": "10:10",
     "Segment4text": "Demo",
-    "PresentationURL": "./presentations/Presentation26.pdf",
+    "PresentationURL": "../presentations/Presentation26.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185146185/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=d32f35237d34ff5f1b61b0d75a0e838f48421c2c4787ac50e76134a12240d855"
   },
   {
@@ -1316,7 +1316,7 @@
     "Segment4": "550",
     "Segment4NumberText": "9:10",
     "Segment4text": "Security Posture",
-    "PresentationURL": "./presentations/Presentation27.pdf",
+    "PresentationURL": "../presentations/Presentation27.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185146845/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=37dab869097a230a8c6f4fceb5541c6224ab23939d4ba8e6672bb844aff9c425"
   },
   {
@@ -1340,7 +1340,7 @@
     "Segment4": "900",
     "Segment4NumberText": "15:00",
     "Segment4text": "Closing",
-    "PresentationURL": "./presentations/Presentation28.pdf",
+    "PresentationURL": "../presentations/Presentation28.pdf",
     "vimeoEmbedUrl": "https://player.vimeo.com/progressive_redirect/playback/1185148511/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=de5f182ea7333e1db595467c2d0f4a0b130e1464bffbc081f2b3d5c460f7b839"
   }
 ]
